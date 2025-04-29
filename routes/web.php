@@ -48,10 +48,10 @@ Route::inertia('/', 'Home', [
 
 // Profiles
 Route::controller(SchoolProfileController::class)->group(function () {
-    Route::get('/ponpes/profile', 'ponpes')->name('profile.ponpes');
-    Route::get('/ra/profile', 'ra')->name('profile.ra');
-    Route::get('/mts/profile', 'mts')->name('profile.mts');
-    Route::get('/ma/profile', 'ma')->name('profile.ma');
+    Route::get('/profile-ponpes', 'ponpes')->name('profile.ponpes');
+    Route::get('/profile-ra', 'ra')->name('profile.ra');
+    Route::get('/profile-mts', 'mts')->name('profile.mts');
+    Route::get('/profile-ma', 'ma')->name('profile.ma');
 });
 
 Route::inertia('/ppdb', 'Ppdb')->name('ppdb');
