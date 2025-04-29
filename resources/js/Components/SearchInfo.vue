@@ -38,7 +38,8 @@ const toggleSearch = () => {
     <div class="z-50">
       <button
         @click="toggleSearch"
-        class="text-white leading-none h-16 w-8 lg:w-12\"
+        class="text-white leading-none h-16 w-8 lg:w-12"
+        aria-label="Cari"
       >
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>

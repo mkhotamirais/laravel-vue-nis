@@ -6,6 +6,8 @@
     <img
       src="/storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png"
       alt="logo yayasan nurul iman sindangkerta"
+      width="100"
+      height="100"
       class="h-10 w-auto object-contain"
     />
     <div class="flex flex-col text-center *:leading-none gap-[2px]">

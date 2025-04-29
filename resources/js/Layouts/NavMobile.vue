@@ -23,6 +23,7 @@ const openSubMenu = (index) => {
     <button
       @click="openNavMobile"
       class="px-3 py-1 text-white hover:bg-primary-dark rounded-lg text-xl"
+      aria-label="Buka menu"
     >
       <i class="fa-solid fa-bars"></i>
     </button>

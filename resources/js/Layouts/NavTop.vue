@@ -15,6 +15,8 @@ import { logos } from "../menus";
             :key="i"
             :src="logo.src"
             :alt="logo.alt"
+            width="50"
+            height="50"
             class="h-6 w-auto object-contain mr-3"
           />
         </div>
@@ -31,13 +33,13 @@ import { logos } from "../menus";
           >
         </div>
         <div class="flex gap-4 order-1 md:order-2">
-          <a href="">
+          <a href="#" aria-label="Kunjungi Facebook">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="">
+          <a href="#" aria-label="Kunjungi Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="">
+          <a href="#" aria-label="Kunjungi Twitter">
             <i class="fa-brands fa-twitter"></i>
           </a>
         </div>

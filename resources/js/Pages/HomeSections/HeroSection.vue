@@ -60,7 +60,7 @@ defineProps({ heroImages: Object });
                 width="400"
                 height="300"
                 :src="`/storage/${hi.banner}`"
-                :alt="hi.title"
+                :alt="hi.name"
                 class="object-cover object-center w-full h-80 lg:h-96 rounded-2xl"
                 loading="lazy"
               />
