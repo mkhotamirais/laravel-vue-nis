@@ -58,7 +58,7 @@ Route::inertia('/ppdb', 'Ppdb')->name('ppdb');
 Route::inertia('/kontak', 'Kontak')->name('kontak');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('verified')->name('dashboard');
+    Route::inertia('/dashboard', 'Dashboard/Index')->middleware('verified')->name('dashboard');
 
     Route::middleware('password.confirm')->group(function () {
         // Admin

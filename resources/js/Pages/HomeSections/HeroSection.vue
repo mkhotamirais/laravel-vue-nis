@@ -44,7 +44,7 @@ defineProps({ heroImages: Object });
             slides-per-view="1"
             speed="1000"
             :navigation="false"
-            :pagination="false"
+            pagination="true"
             class="flex h-full"
             effect="fade"
             loop="true"

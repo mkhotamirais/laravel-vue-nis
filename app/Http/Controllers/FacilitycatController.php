@@ -11,7 +11,7 @@ class FacilitycatController extends Controller
 {
     public function index(Request $request)
     {
-        $facilitycats = Facilitycat::with('user:id,name')
+        $facilitycats = Facilitycat::with('user:id,name,role')
             ->filter(request(['search']))
             ->latest()
             ->paginate(12)

@@ -11,7 +11,7 @@ class InfocatController extends Controller
 {
     public function index(Request $request)
     {
-        $infocats = Infocat::with('user:id,name')
+        $infocats = Infocat::with('user:id,name,role')
             ->filter(request(['search']))
             ->latest()
             ->paginate(12)
