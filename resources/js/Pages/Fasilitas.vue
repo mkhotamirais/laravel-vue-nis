@@ -36,7 +36,7 @@ const user = computed(() => page.props.auth.user);
     description="Galeri Kegiatan Siswa dan Fasilitas dalam Nuansa Islami"
   />
 
-  <section class="container py-8 relative">
+  <section class="container py-8 relative overflow-hidden">
     <!-- Editor -->
     <div v-if="user" class="flex items-center justify-between mb-6">
       <Link :href="route('fasilitas.create')" class="btn">Tambah</Link>
@@ -45,7 +45,11 @@ const user = computed(() => page.props.auth.user);
     <SessionMsg :msg="success" />
 
     <div v-if="facilities.data.length" class="">
-      <div v-for="(f, i) in facilities.data" :key="i" class="mb-8">
+      <div
+        v-for="(f, i) in facilities.data"
+        :key="i"
+        class="mb-8 relative overflow-hidden"
+      >
         <MyBg :position="i % 2 === 0 ? 'left' : 'right'" />
         <div class="mb-4 border-l-2 border-primary pl-4 space-y-1">
           <h3 class="h3 first-letter:uppercase">{{ f.name }}</h3>

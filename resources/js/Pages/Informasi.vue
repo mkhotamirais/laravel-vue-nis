@@ -67,7 +67,7 @@ const selectTag = (tag) => {
     description="Seputar Kegiatan dan Prestasi Siswa serta Berita dan Artikel terkait Sekolah"
   />
 
-  <section class="container py-8 relative">
+  <section class="container py-8 relative overflow-hidden">
     <MyBg position="left" />
     <!-- Editor -->
     <div v-if="user" class="flex items-center justify-between mb-6">

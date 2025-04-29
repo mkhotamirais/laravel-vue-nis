@@ -17,7 +17,7 @@ import MyBg from "@/Components/MyBg.vue";
     description="Penerimaan Peserta Didik Baru Nurul Iman Sindangkerta"
   />
 
-  <section class="container py-12 leading-7 relative">
+  <section class="container py-12 leading-7 relative overflow-hidden">
     <MyBg position="left" />
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <article class="space-y-4">

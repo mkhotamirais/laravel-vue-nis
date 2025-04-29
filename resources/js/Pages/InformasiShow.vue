@@ -19,7 +19,7 @@ defineProps({
     />
   </Head>
 
-  <section class="container py-12 relative">
+  <section class="container py-12 relative overflow-hidden">
     <MyBg position="left" />
     <div class="flex flex-col md:flex-row gap-8 place-items-start">
       <article class="w-full">

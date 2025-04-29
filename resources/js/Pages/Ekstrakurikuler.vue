@@ -55,7 +55,7 @@ const deleteEkskul = (ec) => {
     description="Daftar Ekstrakurikuler di Nurul Iman Sindangkerta"
   />
 
-  <section class="py-8 relative">
+  <section class="py-8 relative overflow-hidden">
     <MyBg position="left" />
     <div class="container">
       <!-- Editor -->
