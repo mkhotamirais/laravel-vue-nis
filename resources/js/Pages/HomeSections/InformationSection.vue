@@ -33,7 +33,7 @@ const selectTag = (tag) => {
 </script>
 
 <template>
-  <section class="py-12">
+  <section class="py-12 relative overflow-hidden">
     <MyBg />
     <div class="container">
       <TitleSection
