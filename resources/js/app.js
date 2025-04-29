@@ -1,11 +1,10 @@
 import "./bootstrap";
 import "../css/app.css";
 
-import { createApp, h, watch } from "vue";
-import { createInertiaApp, Head, Link, usePage } from "@inertiajs/vue3";
+import { createApp, h } from "vue";
+import { createInertiaApp, Head, Link } from "@inertiajs/vue3";
 import { ZiggyVue } from "../../vendor/tightenco/ziggy";
 import MainLayout from "./Layouts/MainLayout.vue";
-import { setFaviconByPath } from "./favicon";
 import { register } from "swiper/element/bundle";
 
 createInertiaApp({
@@ -16,34 +15,12 @@ createInertiaApp({
         return page;
     },
     setup({ el, App, props, plugin }) {
-        // createApp({ render: () => h(App, props) })
-        //     .use(plugin)
-        //     .use(ZiggyVue)
-        //     .component("Head", Head)
-        //     .component("Link", Link)
-        //     .mount(el);
-        const app = createApp({ render: () => h(App, props) });
-
-        app.use(plugin)
+        createApp({ render: () => h(App, props) })
+            .use(plugin)
             .use(ZiggyVue)
             .component("Head", Head)
-            .component("Link", Link);
-
-        // 🧠 Tambahkan watcher di sini
-        app.mixin({
-            mounted() {
-                const page = usePage();
-                watch(
-                    () => page.url,
-                    (newUrl) => {
-                        setFaviconByPath(newUrl);
-                    },
-                    { immediate: true }
-                );
-            },
-        });
-
-        app.mount(el);
+            .component("Link", Link)
+            .mount(el);
     },
     progress: {
         // delay: 250,
