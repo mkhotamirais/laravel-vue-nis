@@ -10,6 +10,7 @@ use App\Http\Controllers\InfocatController;
 use App\Http\Controllers\InfoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuoteController;
+use App\Http\Controllers\SchoolProfileController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Models\Agenda;
 use App\Models\Facility;
@@ -46,14 +47,15 @@ Route::inertia('/', 'Home', [
 ])->name('home');
 
 // Profiles
-Route::inertia('/ponpes/profile', 'Profile/ProfilePonpes')->name('profile.ponpes');
-Route::inertia('/ra/profile', 'Profile/ProfileRa')->name('profile.ra');
-Route::inertia('/mts/profile', 'Profile/ProfileMts')->name('profile.mts');
-Route::inertia('/ma/profile', 'Profile/ProfileMa')->name('profile.ma');
+Route::controller(SchoolProfileController::class)->group(function () {
+    Route::get('/ponpes/profile', 'ponpes')->name('profile.ponpes');
+    Route::get('/ra/profile', 'ra')->name('profile.ra');
+    Route::get('/mts/profile', 'mts')->name('profile.mts');
+    Route::get('/ma/profile', 'ma')->name('profile.ma');
+});
 
 Route::inertia('/ppdb', 'Ppdb')->name('ppdb');
 Route::inertia('/kontak', 'Kontak')->name('kontak');
-Route::inertia('/fasilitas', 'Fasilitas')->name('fasilitas');
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('verified')->name('dashboard');
