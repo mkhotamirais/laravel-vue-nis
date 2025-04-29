@@ -100,8 +100,9 @@ const deleteEkskul = (ec) => {
             <div>
               <img
                 :src="`/storage/${ec.banner}`"
-                alt=""
+                :alt="ec.name"
                 class="h-full w-full object-cover object-center"
+                loading="lazy"
               />
             </div>
             <article class="col-span-2 space-y-2 rounded-lg p-4">

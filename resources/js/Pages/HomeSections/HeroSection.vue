@@ -54,11 +54,15 @@ defineProps({ heroImages: Object });
               v-for="(hi, i) in heroImages"
               :key="i"
               class="overflow-hidden p-0 md:p-8"
+              lazy="true"
             >
               <img
+                width="400"
+                height="300"
                 :src="`/storage/${hi.banner}`"
-                alt=""
+                :alt="hi.title"
                 class="object-cover object-center w-full h-80 lg:h-96 rounded-2xl"
+                loading="lazy"
               />
             </swiper-slide>
           </swiper-container>

@@ -32,6 +32,9 @@ defineProps({
           :src="`/storage/${info.banner}`"
           :alt="smartTrim(info.title, 100)"
           class="w-full rounded-md mb-6"
+          width="500"
+          height="300"
+          loading="lazy"
         />
         <p class="leading-7 first-letter:uppercase">{{ info.content }}</p>
       </article>

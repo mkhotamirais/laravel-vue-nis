@@ -59,7 +59,7 @@ import MyBg from "@/Components/MyBg.vue";
         <a href="/storage/images/ppdb-ma-2025.jpg">
           <img
             src="/storage/images/ppdb-ma-2025.jpg"
-            alt=""
+            alt="banner ppdb ma 2025"
             class="object-contain object-center h-[480px] rounded-lg mx-auto"
           />
         </a>

@@ -19,7 +19,7 @@ defineProps({
         <div v-for="(f, i) in facilities" :key="i">
           <img
             :src="`/storage/${f.banner}`"
-            alt=""
+            :alt="f.title"
             loading="lazy"
             class="rounded-lg h-56 lg:h-64 w-full object-cover object-center"
           />

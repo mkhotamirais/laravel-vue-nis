@@ -31,8 +31,14 @@ import TitleSection from "@/Components/TitleSection.vue";
         <div
           v-for="(branch, i) in branchs"
           :key="i"
-          class="p-4 rounded-lg h-full bg-white shadow-lg border-l-2 border-primary flex flex-col items-center justify-center"
+          class="relative p-4 rounded-lg h-full bg-white shadow-lg border-l-2 border-primary flex flex-col items-center justify-center"
         >
+          <img
+            :src="branch.logo"
+            :alt="branch.logoAlt"
+            class="absolute left-2 top-2 w-8"
+            loading="lazy"
+          />
           <h3 class="text-xl font-bold text-secondary">
             {{ branch.title }}
           </h3>

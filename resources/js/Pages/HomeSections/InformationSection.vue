@@ -51,7 +51,7 @@ const selectTag = (tag) => {
             :src="`/storage/${info.banner}`"
             :alt="smartTrim(info.title, 100)"
             class="h-48 w-full object-cover object-center"
-            width="500"
+            width="400"
             height="300"
             loading="lazy"
           />

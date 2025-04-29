@@ -116,7 +116,9 @@ const selectTag = (tag) => {
                   ? 'storage/' + info.banner
                   : 'storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
               "
-              alt="{{ info->title }}"
+              :alt="info.title"
+              width="500"
+              height="300"
               loading="lazy"
               :class="`object-cover h-full w-full md:w-56 bg-gray-100`"
             />

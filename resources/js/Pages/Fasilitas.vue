@@ -63,7 +63,7 @@ const user = computed(() => page.props.auth.user);
           <div class="w-full">
             <img
               :src="`/storage/${f.banner}`"
-              alt=""
+              :alt="f.name"
               class="rounded-md object-center object-cover"
               loading="lazy"
             />

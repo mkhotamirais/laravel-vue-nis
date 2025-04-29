@@ -49,10 +49,34 @@ export const logos = [
 ];
 
 export const branchs = [
-    { title: "RA", url: "/ra/profile", total: "25+" },
-    { title: "Ponpes", url: "/ponpes/profile", total: "210+" },
-    { title: "MA", url: "/ma/profile", total: "290+" },
-    { title: "MTs", url: "/mts/profile", total: "140+" },
+    {
+        title: "RA",
+        url: "/ra/profile",
+        total: "25+",
+        logo: "/storage/images/logos/logo-ra-nurul-iman-sindangkerta.png",
+        altLogo: "Logo ra nurul iman sindangkerta",
+    },
+    {
+        title: "Ponpes",
+        url: "/ponpes/profile",
+        total: "210+",
+        logo: "/storage/images/logos/logo-ponpes-nurul-iman-sindangkerta.png",
+        altLogo: "Logo ponpes nurul iman sindangkerta",
+    },
+    {
+        title: "MA",
+        url: "/ma/profile",
+        total: "290+",
+        logo: "/storage/images/logos/logo-ma-nurul-iman-sindangkerta.png",
+        altLogo: "Logo ma nurul iman sindangkerta",
+    },
+    {
+        title: "MTs",
+        url: "/mts/profile",
+        total: "140+",
+        logo: "/storage/images/logos/logo-mts-nurul-iman-sindangkerta.png",
+        altLogo: "Logo mts nurul iman sindangkerta",
+    },
 ];
 
 export const footerMenus1 = [
