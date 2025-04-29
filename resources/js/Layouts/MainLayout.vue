@@ -35,7 +35,7 @@ const closeBothNav = () => {
 
 <template>
   <div class="flex flex-col min-h-screen">
-    <article class="bg-primary text-white text-center">
+    <article v-if="user" class="bg-primary text-white text-center">
       <div class="container">
         Untuk para admin, apabila ada kendala teknis atau ada masukan untuk
         website ini, silahkan hubungi kontak dibawah <br />
