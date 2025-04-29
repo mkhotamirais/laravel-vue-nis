@@ -53,6 +53,15 @@ const selectTag = (tag) => {
 </script>
 
 <template>
+  <Head>
+    <title>Informasi</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Seputar Kegiatan dan Prestasi Siswa serta Berita dan Artikel terkait Sekolah"
+    />
+  </Head>
+
   <SectionHero
     title="Informasi"
     description="Seputar Kegiatan dan Prestasi Siswa serta Berita dan Artikel terkait Sekolah"

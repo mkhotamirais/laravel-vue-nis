@@ -34,6 +34,14 @@ const closeBothNav = () => {
 </script>
 
 <template>
+  <Head>
+    <title>Home</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Nurul Iman Lembur ilmu, Majelis disiplin, Kancah ibadah dan Wahana perjuangan"
+    />
+  </Head>
   <div class="flex flex-col min-h-screen">
     <article v-if="user" class="bg-primary text-white text-center">
       <div class="container">

@@ -10,6 +10,15 @@ defineProps({
 </script>
 
 <template>
+  <Head>
+    <title>{{ smartTrim(info.title, 45) }}</title>
+    <meta
+      head-key="description"
+      name="description"
+      :content="smartTrim(info.content, 145)"
+    />
+  </Head>
+
   <section class="container py-12 relative">
     <MyBg position="left" />
     <div class="flex flex-col md:flex-row gap-8 place-items-start">

@@ -5,6 +5,14 @@ import { contactMenus, socialsMenus } from "../menus";
 </script>
 
 <template>
+  <Head>
+    <title>Kontak</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Hubungi kami untuk informasi lebih lanjut"
+    />
+  </Head>
   <SectionHero
     title="Kontak"
     description="Hubungi kami untuk informasi lebih lanjut"

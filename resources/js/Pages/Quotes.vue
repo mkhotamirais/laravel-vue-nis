@@ -56,7 +56,19 @@ const deleteQuote = (q) => {
 </script>
 
 <template>
-  <SectionHero title="Quotes" />
+  <Head>
+    <title>Fasilitas</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="ata kata mutiara pilihan untuk menenangkan jiwa"
+    />
+  </Head>
+
+  <SectionHero
+    title="Quotes"
+    description="Kata kata mutiara pilihan untuk menenangkan jiwa"
+  />
   <section class="bg-gray-100">
     <!-- Admin -->
     <div v-if="user" class="container pt-8">

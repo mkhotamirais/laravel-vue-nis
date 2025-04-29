@@ -4,6 +4,14 @@ import MyBg from "@/Components/MyBg.vue";
 </script>
 
 <template>
+  <Head>
+    <title>PPDB</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Penerimaan Peserta Didik Baru Nurul Iman Sindangkerta"
+    />
+  </Head>
   <SectionHero
     title="PPDB"
     description="Penerimaan Peserta Didik Baru Nurul Iman Sindangkerta"

@@ -17,6 +17,7 @@ defineProps({
 </script>
 
 <template>
+  <Head title="Home" />
   <HeroSection :heroImages="heroImages" />
   <ProfileSection />
   <InformationSection :infos="infos" />

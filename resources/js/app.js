@@ -8,6 +8,7 @@ import MainLayout from "./Layouts/MainLayout.vue";
 import { register } from "swiper/element/bundle";
 
 createInertiaApp({
+    title: (title) => `Nurul Iman${title ? ` - ${title}` : ""}`,
     resolve: (name) => {
         const pages = import.meta.glob("./Pages/**/*.vue", { eager: true });
         let page = pages[`./Pages/${name}.vue`];

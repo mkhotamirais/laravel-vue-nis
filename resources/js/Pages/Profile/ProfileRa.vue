@@ -3,9 +3,18 @@ import SectionHero from "@/Components/SectionHero.vue";
 </script>
 
 <template>
+  <Head>
+    <title>Profile RA</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Profile Raudhatul Athfal Nurul Iman Sindangkerta"
+    />
+  </Head>
+
   <SectionHero
-    title="Profile"
-    description="Raudhatul Athfal Nurul Iman Sindangkerta"
+    title="Profile RA"
+    description="Profile Raudhatul Athfal Nurul Iman Sindangkerta"
   />
 
   <section class="py-12 relative">

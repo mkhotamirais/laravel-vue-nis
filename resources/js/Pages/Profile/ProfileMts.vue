@@ -3,6 +3,15 @@ import SectionHero from "@/Components/SectionHero.vue";
 </script>
 
 <template>
+  <Head>
+    <title>Profile MTs</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Profile Madrasah Tsanawiyah Nurul Iman Sindangkerta"
+    />
+  </Head>
+
   <SectionHero
     title="Profile MTs"
     description="Profile Madrasah Tsanawiyah Nurul Iman Sindangkerta"

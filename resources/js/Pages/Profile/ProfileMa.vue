@@ -4,6 +4,14 @@ import MyBg from "@/Components/MyBg.vue";
 </script>
 
 <template>
+  <Head>
+    <title>Profile MA</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Profile Madrasah Aliyah Nurul Iman Sindangkerta"
+    />
+  </Head>
   <SectionHero
     title="Profile MA"
     description="Profile Madrasah Aliyah Nurul Iman Sindangkerta"

@@ -24,9 +24,18 @@ const user = computed(() => page.props.auth.user);
 </script>
 
 <template>
+  <Head>
+    <title>Agenda</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Agenda dan pengumuman penting seputar kegiatan sekolah terkini"
+    />
+  </Head>
+
   <SectionHero
     title="Pengumuman & Agenda"
-    description="Informasi agenda dan pengumuman penting seputar kegiatan sekolah terkini"
+    description="Agenda dan pengumuman penting seputar kegiatan sekolah terkini"
   />
 
   <section class="py-8 overflow-hidden relative">

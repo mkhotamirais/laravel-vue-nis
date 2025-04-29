@@ -41,6 +41,15 @@ const deleteEkskul = (ec) => {
 </script>
 
 <template>
+  <Head>
+    <title>Ekstrakurikuler</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Daftar Ekstrakurikuler di Nurul Iman Sindangkerta"
+    />
+  </Head>
+
   <SectionHero
     title="Ekstrakurikuler"
     description="Daftar Ekstrakurikuler di Nurul Iman Sindangkerta"

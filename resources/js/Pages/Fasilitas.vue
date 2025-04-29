@@ -22,6 +22,15 @@ const user = computed(() => page.props.auth.user);
 </script>
 
 <template>
+  <Head>
+    <title>Fasilitas</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Galeri Kegiatan Siswa dan Fasilitas dalam Nuansa Islami"
+    />
+  </Head>
+
   <SectionHero
     title="Fasilitas"
     description="Galeri Kegiatan Siswa dan Fasilitas dalam Nuansa Islami"
