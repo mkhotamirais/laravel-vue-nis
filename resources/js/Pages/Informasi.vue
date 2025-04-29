@@ -94,63 +94,67 @@ const selectTag = (tag) => {
             >Setel Ulang</Link
           >
         </p>
-        <div
-          v-for="(info, i) in infos.data"
-          :key="i"
-          class="relative h-full md:h-48 rounded overflow-hidden md:flex md:flex-row sm:gap-6 mb-6"
-        >
-          <img
-            :src="
-              info.banner
-                ? 'storage/' + info.banner
-                : 'storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
-            "
-            alt="{{ info->title }}"
-            loading="lazy"
-            :class="`object-cover h-full w-full md:w-56 bg-gray-100`"
-          />
+        <div v-if="infos.data.length">
+          <div
+            v-for="(info, i) in infos.data"
+            :key="i"
+            class="relative h-full md:h-48 rounded overflow-hidden md:flex md:flex-row sm:gap-6 mb-6"
+          >
+            <img
+              :src="
+                info.banner
+                  ? 'storage/' + info.banner
+                  : 'storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
+              "
+              alt="{{ info->title }}"
+              loading="lazy"
+              :class="`object-cover h-full w-full md:w-56 bg-gray-100`"
+            />
 
-          <article class="relative w-full flex flex-col h-full space-y-2">
-            <Link
-              :href="route('informasi.show', info)"
-              class="hover:underline w-fit"
-            >
-              <h3 class="h3">
-                {{ smartTrim(info.title, 50) }}
-              </h3>
-            </Link>
-
-            <div class="flex gap-2 items-center">
-              <button @click="searchCategory(info.infocat.name)" class="badge">
-                {{ info.infocat.name }}
-              </button>
-              <span class="font-extrabold">·</span>
-              <button
-                v-for="(tag, i) in info.tags.split(',')"
-                :key="i"
-                @click="selectTag(tag)"
-                class="badge !bg-gray-600"
+            <article class="relative w-full flex flex-col h-full space-y-2">
+              <Link
+                :href="route('informasi.show', info)"
+                class="hover:underline w-fit"
               >
-                {{ tag }}
+                <h3 class="h3">
+                  {{ smartTrim(info.title, 50) }}
+                </h3>
+              </Link>
+
+              <div class="flex gap-2 items-center">
+                <!-- <button @click="searchCategory(info.infocat.name)" class="badge">
+                {{ info.infocat.name }}
+              </button> -->
+                <span class="font-extrabold">·</span>
+                <button
+                  v-for="(tag, i) in info.tags.split(',')"
+                  :key="i"
+                  @click="selectTag(tag)"
+                  class="badge !bg-gray-600"
+                >
+                  {{ tag }}
+                </button>
+              </div>
+              <p class="text-gray-700 flex-1">
+                {{ smartTrim(info.content, 250) }}
+              </p>
+              <p class="mb-2 text-sm text-gray-500">
+                {{ diffForHumans(info.created_at) }}
+              </p>
+            </article>
+            <!-- Editor -->
+            <div v-if="user" class="absolute right-0 bottom-0">
+              <Link :href="route('informasi.edit', info)" class="link"
+                >ubah</Link
+              >
+              |
+              <button class="link !text-red-500" @click="deleteInfo(info)">
+                hapus
               </button>
             </div>
-            <p class="text-gray-700 flex-1">
-              {{ smartTrim(info.content, 250) }}
-            </p>
-            <p class="mb-2 text-sm text-gray-500">
-              {{ diffForHumans(info.created_at) }}
-            </p>
-          </article>
-          <!-- Editor -->
-          <div v-if="user" class="absolute right-0 bottom-0">
-            <Link :href="route('informasi.edit', info)" class="link">ubah</Link>
-            |
-            <button class="link !text-red-500" @click="deleteInfo(info)">
-              hapus
-            </button>
           </div>
         </div>
-        <div v-show="infos.data.length === 0" class="text-xl">
+        <div v-else class="text-xl">
           <i>Hasil tidak ditemukan</i>
         </div>
         <PaginationInput :paginator="infos" />
