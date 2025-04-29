@@ -13,6 +13,7 @@ import SectionHero from "@/Components/SectionHero.vue";
       <p>update</p>
       <p>Segera datang updates</p>
       <p>update</p>
+      <p>lagi</p>
     </div>
   </section>
 </template>
