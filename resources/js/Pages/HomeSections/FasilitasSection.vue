@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <section class="py-12">
+  <section class="py-12 relative overflow-hidden">
     <MyBg position="left" />
     <div class="container">
       <TitleSection

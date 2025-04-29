@@ -9,7 +9,7 @@ import MyBg from "@/Components/MyBg.vue";
     description="Profile Madrasah Aliyah Nurul Iman Sindangkerta"
   />
 
-  <section class="py-12 relative">
+  <section class="py-12 relative overflow-hidden">
     <MyBg position="left" />
     <div class="container">
       <p>update</p>

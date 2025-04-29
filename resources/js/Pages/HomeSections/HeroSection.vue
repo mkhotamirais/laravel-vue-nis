@@ -5,7 +5,7 @@ defineProps({ heroImages: Object });
 </script>
 
 <template>
-  <section class="">
+  <section class="relative overflow-hidden">
     <Mybg position="left" />
 
     <div class="container py-16">

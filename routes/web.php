@@ -45,6 +45,7 @@ Route::inertia('/', 'Home', [
         }),
 ])->name('home');
 
+// Profiles
 Route::inertia('/ponpes/profile', 'Profile/ProfilePonpes')->name('profile.ponpes');
 Route::inertia('/ra/profile', 'Profile/ProfileRa')->name('profile.ra');
 Route::inertia('/mts/profile', 'Profile/ProfileMts')->name('profile.mts');
