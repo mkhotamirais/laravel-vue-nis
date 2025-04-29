@@ -7,4 +7,10 @@ import SectionHero from "@/Components/SectionHero.vue";
     title="Profile"
     description="Pondok Pesantren Nurul Iman Sindangkerta"
   />
+
+  <section class="py-12 relative">
+    <div class="container">
+      <p>Segera datang</p>
+    </div>
+  </section>
 </template>

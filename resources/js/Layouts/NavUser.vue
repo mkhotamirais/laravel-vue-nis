@@ -47,6 +47,16 @@ defineProps({
             </button>
           </div>
           <div class="mt-4">
+            <div v-if="user.role === 'admin'">
+              <Link
+                href="/admin"
+                class="btn block w-full text-left"
+                @click="closeBothNav"
+              >
+                <i :class="`fa-solid fa-shield mr-2`"></i>
+                Admin
+              </Link>
+            </div>
             <Link
               v-for="(menu, i) in userMenus"
               :href="menu.url"

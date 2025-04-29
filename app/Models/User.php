@@ -21,6 +21,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**
@@ -79,5 +80,10 @@ class User extends Authenticatable implements MustVerifyEmail
     public function quotes()
     {
         return $this->hasMany(Quote::class);
+    }
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
     }
 }

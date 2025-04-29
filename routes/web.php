@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExtracurricularController;
@@ -9,6 +10,7 @@ use App\Http\Controllers\InfocatController;
 use App\Http\Controllers\InfoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuoteController;
+use App\Http\Middleware\AdminMiddleware;
 use App\Models\Agenda;
 use App\Models\Facility;
 use App\Models\Info;
@@ -56,6 +58,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('verified')->name('dashboard');
 
     Route::middleware('password.confirm')->group(function () {
+        // Admin
+        Route::middleware(AdminMiddleware::class)
+            ->controller(AdminController::class)
+            ->group(function () {
+                Route::get('/admin', 'index')->name('admin.index');
+                Route::put('/admin/{user}/role', 'updateRole')->name('admin.updateRole');
+            });
+
         Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         Route::put('/profile', [ProfileController::class, 'updatePassword'])->name('profile.password');
