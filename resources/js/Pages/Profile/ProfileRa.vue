@@ -11,7 +11,7 @@ import SectionHero from "@/Components/SectionHero.vue";
   <section class="py-12 relative">
     <div class="container">
       <p>update</p>
-      <p>Segera datang</p>
+      <p>Segera datang updates</p>
       <p>update</p>
     </div>
   </section>
