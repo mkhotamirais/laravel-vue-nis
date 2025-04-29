@@ -67,6 +67,7 @@ const selectTag = (tag) => {
 
     <SessionMsg :msg="success" />
 
+    <p>update</p>
     <div class="flex flex-col lg:flex-row gap-12 py-8 place-items-start">
       <div class="w-full">
         <p
