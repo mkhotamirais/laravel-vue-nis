@@ -12,7 +12,6 @@ import MyBg from "@/Components/MyBg.vue";
   <section class="py-12 relative overflow-hidden">
     <MyBg position="left" />
     <div class="container">
-      <p>update</p>
       <!-- Sambutan -->
       <div class="mb-8 max-w-2xl">
         <div class="mb-4">
