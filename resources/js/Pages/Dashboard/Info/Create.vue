@@ -1,0 +1,82 @@
+<script setup>
+import Input from "@/Components/Input.vue";
+import Textarea from "@/Components/Textarea.vue";
+import Select from "@/Components/Select.vue";
+import ImageUpload from "@/Components/ImageUpload.vue";
+import { useForm } from "@inertiajs/vue3";
+
+defineProps({ infocats: Object });
+
+const form = useForm({
+  title: null,
+  infocat_id: "",
+  content: null,
+  tags: null,
+  banner: null,
+});
+
+const banner = (e) => (form.banner = e);
+
+const submit = () => {
+  form.post(route("informasi.store"), {
+    onSuccess: () => {
+      form.reset();
+    },
+  });
+};
+</script>
+
+<template>
+  <section class="container py-4">
+    <h1 class="h1">Tambah Information</h1>
+    <p>
+      Informasi mencakup kegiatan dan prestasi siswa serta berita dan artikel
+      sekolah
+    </p>
+    <form @submit.prevent="submit" class="py-4 max-w-lg">
+      <ImageUpload @image="(e) => banner(e)" />
+      <Input
+        label="Title"
+        icon="heading"
+        placeholder="Judul.."
+        v-model="form.title"
+        :error="form.errors.title"
+      />
+      <Select
+        label="Information Category"
+        icon="sitemap"
+        v-model="form.infocat_id"
+        :error="form.errors.infocat_id"
+      >
+        <option value="">Pilih Kategori</option>
+        <option v-for="(ic, i) in infocats" :key="i" :value="ic.id">
+          {{ ic.name }}
+        </option>
+      </Select>
+      <Input
+        label="Tags (pisah dengan koma)"
+        icon="tags"
+        placeholder="tag1, tag2, tag3"
+        v-model="form.tags"
+        :error="form.errors.tags"
+      />
+      <Textarea
+        label="Content"
+        icon="newspaper"
+        placeholder="Content.."
+        v-model="form.content"
+        :error="form.errors.content"
+      />
+      <div class="flex gap-2">
+        <button type="submit" class="btn" :disabled="form.processing">
+          Tambah
+        </button>
+        <Link
+          :href="route('informasi')"
+          class="btn inline-block !bg-gray-500 hover:!bg-gray-600"
+          >Kembali</Link
+        >
+      </div>
+    </form>
+  </section>
+</template>
