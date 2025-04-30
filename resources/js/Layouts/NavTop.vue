@@ -32,14 +32,14 @@ import { logos } from "../menus";
             >nuruliman@gmail.com</a
           >
         </div>
-        <div class="flex gap-4 order-1 md:order-2">
-          <a href="#" aria-label="Kunjungi Facebook">
+        <div class="flex order-1 md:order-2">
+          <a href="#" aria-label="Kunjungi Facebook" class="p-2 px-3">
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="#" aria-label="Kunjungi Instagram">
+          <a href="#" aria-label="Kunjungi Instagram" class="p-2 px-3">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="#" aria-label="Kunjungi Twitter">
+          <a href="#" aria-label="Kunjungi Twitter" class="p-2 px-3">
             <i class="fa-brands fa-twitter"></i>
           </a>
         </div>

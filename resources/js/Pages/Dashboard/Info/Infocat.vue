@@ -99,7 +99,10 @@ const search = () => {
     <div v-if="infocats.data.length">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
         <template v-for="(ic, i) in infocats.data" :key="i">
-          <div v-show="ic.user.role === user.role" class="shadow-md p-3">
+          <div
+            v-show="user.role === ic.user.role || user.role === 'admin'"
+            class="shadow-md p-3"
+          >
             <form @submit.prevent="submitEdit(ic)" v-if="isEdit === i" class="">
               <Input
                 placeholder="Edit name"

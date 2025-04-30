@@ -3,7 +3,8 @@ import Input from "@/Components/Input.vue";
 import Textarea from "@/Components/Textarea.vue";
 import Select from "@/Components/Select.vue";
 import ImageUpload from "@/Components/ImageUpload.vue";
-import { useForm } from "@inertiajs/vue3";
+import { useForm, usePage } from "@inertiajs/vue3";
+import { computed } from "vue";
 
 const props = defineProps({ info: Object, infocats: Object });
 
@@ -16,6 +17,8 @@ const form = useForm({
   _method: "PATCH",
 });
 
+const page = usePage();
+const user = computed(() => page.props.auth.user);
 const banner = (e) => (form.banner = e);
 
 const submit = () => {
@@ -50,9 +53,14 @@ const submit = () => {
         :error="form.errors.infocat_id"
       >
         <option value="">Pilih Kategori</option>
-        <option v-for="(ic, i) in infocats" :key="i" :value="ic.id">
-          {{ ic.name }}
-        </option>
+        <template v-for="(ic, i) in infocats" :key="i">
+          <option
+            v-if="user.role === 'admin' || user.role === ic.user.role"
+            :value="ic.id"
+          >
+            {{ ic.name }}
+          </option>
+        </template>
       </Select>
       <Input
         label="Tags (pisah dengan koma)"

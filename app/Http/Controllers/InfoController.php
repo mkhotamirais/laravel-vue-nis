@@ -55,13 +55,13 @@ class InfoController extends Controller
 
     public function create()
     {
-        $infocats = Infocat::orderBy('name')->get();
+        $infocats = Infocat::with('user:id,name,role')->orderBy('name')->get();
         return inertia('Dashboard/Info/Create', compact('infocats'));
     }
 
     public function edit(Info $info)
     {
-        $infocats = Infocat::orderBy('name')->get();
+        $infocats = Infocat::with('user:id,name,role')->orderBy('name')->get();
         return inertia('Dashboard/Info/Edit', compact('info', 'infocats'));
     }
 

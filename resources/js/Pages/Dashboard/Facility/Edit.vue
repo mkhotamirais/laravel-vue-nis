@@ -3,8 +3,8 @@ import Input from "@/Components/Input.vue";
 import Select from "@/Components/Select.vue";
 import ImageUpload from "@/Components/ImageUpload.vue";
 import ImagesUpload from "@/Components/ImagesUpload.vue";
-import { useForm } from "@inertiajs/vue3";
-import { ref, watch, computed } from "vue";
+import { useForm, usePage } from "@inertiajs/vue3";
+import { computed } from "vue";
 
 const props = defineProps({
   facility: Object,
@@ -20,6 +20,9 @@ const form = useForm({
   delete_images: [],
   _method: "PATCH",
 });
+
+const page = usePage();
+const user = computed(() => page.props.auth.user);
 
 const banner = (e) => (form.banner = e);
 const images = (e) => (form.images = e);
@@ -68,9 +71,14 @@ const submit = () => {
         :error="form.errors.infocat_id"
       >
         <option value="">Pilih Kategori</option>
-        <option v-for="(fc, i) in facilitycats" :key="i" :value="fc.id">
-          {{ fc.name }}
-        </option>
+        <template v-for="(fc, i) in facilitycats" :key="i">
+          <option
+            v-if="user.role === 'admin' || user.role === fc.user.role"
+            :value="fc.id"
+          >
+            {{ fc.name }}
+          </option>
+        </template>
       </Select>
       <Input
         label="Caption"

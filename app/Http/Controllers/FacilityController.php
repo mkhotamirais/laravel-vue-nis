@@ -21,14 +21,14 @@ class FacilityController extends Controller
 
     public function create()
     {
-        $facilitycats = Facilitycat::orderBy('name')->get();
+        $facilitycats = Facilitycat::with('user:id,name,role')->orderBy('name')->get();
         return inertia('Dashboard/Facility/Create', compact('facilitycats'));
     }
 
     public function edit(Facility $facility)
     {
         $facility = $facility->load('facilityimages');
-        $facilitycats = Facilitycat::orderBy('name')->get();
+        $facilitycats = Facilitycat::with('user:id,name,role')->orderBy('name')->get();
         return inertia('Dashboard/Facility/Edit', compact('facility', 'facilitycats'));
     }
 

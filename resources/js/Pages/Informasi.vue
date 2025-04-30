@@ -76,7 +76,6 @@ const selectTag = (tag) => {
 
     <SessionMsg :msg="success" />
 
-    <p>update</p>
     <div class="flex flex-col lg:flex-row gap-12 py-8 place-items-start">
       <div class="w-full">
         <p
@@ -134,9 +133,14 @@ const selectTag = (tag) => {
               </Link>
 
               <div class="flex gap-2 items-center">
-                <!-- <button @click="searchCategory(info.infocat.name)" class="badge">
-                {{ info.infocat.name }}
-              </button> -->
+                <button
+                  v-if="info.infocat"
+                  @click="searchCategory(info.infocat.name)"
+                  class="badge"
+                >
+                  {{ info.infocat.name }}
+                </button>
+                <div v-else class="badge">uncategorized</div>
                 <span class="font-extrabold">·</span>
                 <button
                   v-for="(tag, i) in info.tags.split(',')"
