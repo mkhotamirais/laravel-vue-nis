@@ -2,6 +2,7 @@
 const model = defineModel();
 defineProps({
   label: String,
+  id: String,
   icon: String,
   error: String,
 });
@@ -9,7 +10,7 @@ defineProps({
 
 <template>
   <div class="mb-3 w-full">
-    <label :for="label" class="block text-sm font-medium text-slate-700">{{
+    <label :for="id" class="block text-sm font-medium text-slate-700">{{
       label
     }}</label>
     <div class="relative mt-1 rounded-md">
@@ -21,6 +22,8 @@ defineProps({
         </span>
       </div>
       <select
+        :id="id"
+        :name="id"
         v-model="model"
         :class="[
           'border w-full rounded-md py-1 pr-3 pl-9 text-sm border-slate-300 outline-0 focus:ring-1 focus:ring-inset focus:ring-primary focus:border-primary plaholder:text-slate-400',

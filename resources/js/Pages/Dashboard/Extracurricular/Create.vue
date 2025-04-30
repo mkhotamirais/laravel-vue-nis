@@ -1,6 +1,7 @@
 <script setup>
 import Input from "@/Components/Input.vue";
 import Textarea from "@/Components/Textarea.vue";
+import TextareaCke from "@/Components/TextareaCke.vue";
 import ImageUpload from "@/Components/ImageUpload.vue";
 
 import { useForm } from "@inertiajs/vue3";
@@ -32,6 +33,7 @@ const submit = () => {
       <ImageUpload @image="(e) => banner(e)" />
       <Input
         label="Name"
+        id="name"
         icon="heading"
         placeholder="Nama Ekskul.."
         v-model="form.name"
@@ -39,26 +41,40 @@ const submit = () => {
       />
       <Input
         label="Pembimbing"
+        id="mentor"
         icon="user"
         placeholder="Nama pembimbing.."
         v-model="form.mentor"
         :error="form.errors.mentor"
       />
-      <Textarea
+      <!-- <Textarea
         label="Description"
+        id="description"
         icon="newspaper"
         placeholder="Deskripsi.."
         v-model="form.description"
         :error="form.errors.description"
+      /> -->
+      <TextareaCke
+        label="Description"
+        id="description"
+        v-model="form.description"
+        :error="form.errors.description"
       />
-      <Textarea
+      <!-- <Textarea
         label="Jadwal"
+        id="jadwal"
         icon="clock"
         placeholder="Jadwal ekskul.."
         v-model="form.schedule"
         :error="form.errors.schedule"
+      /> -->
+      <TextareaCke
+        label="Jadwal"
+        id="schedule"
+        v-model="form.schedule"
+        :error="form.errors.schedule"
       />
-
       <div class="flex gap-2">
         <button type="submit" class="btn" :disabled="form.processing">
           Tambah

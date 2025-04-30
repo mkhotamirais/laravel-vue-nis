@@ -89,6 +89,7 @@ p {
     }
 }
 
+/* Swiper */
 .my-swiper::part(button-next),
 .my-swiper::part(button-prev) {
     background-color: #ffffff;
@@ -97,4 +98,53 @@ p {
     height: 32px;
     box-shadow: 0 0.5rem 1rem rgba(16, 28, 38, 0.05);
     color: #000000;
+}
+
+/* Ckeditor */
+
+.ck-editor__editable {
+    @apply h-48 resize-y;
+}
+
+.ck-editor__editable p {
+    @apply mb-4;
+}
+
+.ck-editor__editable h2,
+.text-content h2 {
+    @apply font-semibold text-xl mb-2 text-gray-800;
+}
+
+.ck-editor__editable h3,
+.text-content h3 {
+    @apply font-semibold text-lg mb-2 text-gray-800;
+}
+
+.ck-editor__editable a,
+.text-content a {
+    @apply font-medium text-primary hover:underline;
+}
+
+.text-content {
+    @apply leading-relaxed text-gray-600 space-y-4 mt-4;
+}
+
+.ck-editor__editable ol,
+.text-content ol {
+    @apply list-decimal mb-4 ml-8;
+}
+
+.ck-editor__editable ol li,
+.text-content ol li {
+    @apply pl-2;
+}
+
+.ck-editor__editable ul,
+.text-content ul {
+    @apply list-disc mb-4 ml-8;
+}
+
+.ck-editor__editable ul li,
+.text-content ul li {
+    @apply pl-2;
 }

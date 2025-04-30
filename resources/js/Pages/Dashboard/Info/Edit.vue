@@ -1,6 +1,7 @@
 <script setup>
 import Input from "@/Components/Input.vue";
 import Textarea from "@/Components/Textarea.vue";
+import TextareaCke from "@/Components/TextareaCke.vue";
 import Select from "@/Components/Select.vue";
 import ImageUpload from "@/Components/ImageUpload.vue";
 import { useForm, usePage } from "@inertiajs/vue3";
@@ -41,6 +42,7 @@ const submit = () => {
       <ImageUpload @image="(e) => banner(e)" :oldBanner="info.banner" />
       <Input
         label="Title"
+        id="title"
         icon="heading"
         placeholder="Judul.."
         v-model="form.title"
@@ -48,6 +50,7 @@ const submit = () => {
       />
       <Select
         label="Information Category"
+        id="information-category"
         icon="sitemap"
         v-model="form.infocat_id"
         :error="form.errors.infocat_id"
@@ -64,15 +67,22 @@ const submit = () => {
       </Select>
       <Input
         label="Tags (pisah dengan koma)"
+        id="tags"
         icon="tags"
         placeholder="tag1, tag2, tag3"
         v-model="form.tags"
         :error="form.errors.tags"
       />
-      <Textarea
+      <!-- <Textarea
         label="Content"
         icon="newspaper"
         placeholder="Content.."
+        v-model="form.content"
+        :error="form.errors.content"
+      /> -->
+      <TextareaCke
+        label="Content"
+        id="info_content"
         v-model="form.content"
         :error="form.errors.content"
       />

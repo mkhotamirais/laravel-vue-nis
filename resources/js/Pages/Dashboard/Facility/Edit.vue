@@ -59,6 +59,7 @@ const submit = () => {
       />
       <Input
         label="Name"
+        id="name"
         icon="heading"
         placeholder="Nama fasilitas / galery.."
         v-model="form.name"
@@ -66,6 +67,7 @@ const submit = () => {
       />
       <Select
         label="Facility Category"
+        id="facility-category"
         icon="image"
         v-model="form.facilitycat_id"
         :error="form.errors.infocat_id"
@@ -82,6 +84,7 @@ const submit = () => {
       </Select>
       <Input
         label="Caption"
+        id="caption"
         icon="paragraph"
         placeholder="Caption.."
         v-model="form.caption"

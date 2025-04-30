@@ -45,6 +45,7 @@ const submit = () => {
       />
       <Input
         label="Name"
+        id="name"
         icon="heading"
         placeholder="Nama Ekskul.."
         v-model="form.name"
@@ -52,22 +53,35 @@ const submit = () => {
       />
       <Input
         label="Pembimbing"
+        id="mentor"
         icon="user"
         placeholder="Nama pembimbing.."
         v-model="form.mentor"
         :error="form.errors.mentor"
       />
-      <Textarea
+      <!-- <Textarea
         label="Description"
         icon="newspaper"
         placeholder="Deskripsi.."
         v-model="form.description"
         :error="form.errors.description"
+      /> -->
+      <TextareaCke
+        label="Description"
+        id="description"
+        v-model="form.description"
+        :error="form.errors.description"
       />
-      <Textarea
+      <!-- <Textarea
         label="Jadwal"
         icon="clock"
         placeholder="Jadwal ekskul.."
+        v-model="form.schedule"
+        :error="form.errors.schedule"
+      /> -->
+      <TextareaCke
+        label="Jadwal"
+        id="schedule"
         v-model="form.schedule"
         :error="form.errors.schedule"
       />

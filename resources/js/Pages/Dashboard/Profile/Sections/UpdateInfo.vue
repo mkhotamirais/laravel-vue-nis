@@ -35,6 +35,7 @@ const resendEmail = (e) => {
 
       <Input
         label="Name"
+        id="name"
         icon="id-badge"
         placeholder="Your name"
         v-model="form.name"
@@ -42,6 +43,7 @@ const resendEmail = (e) => {
       />
       <Input
         label="Email"
+        id="email"
         icon="at"
         placeholder="example@email.com"
         v-model="form.email"

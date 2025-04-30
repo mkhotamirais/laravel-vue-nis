@@ -30,6 +30,7 @@ const submit = () => {
     <form @submit.prevent="submit" class="space-y-4">
       <Input
         label="Current Password"
+        id="current-password"
         v-model="form.current_password"
         icon="key"
         type="password"
@@ -38,6 +39,7 @@ const submit = () => {
       />
       <Input
         label="New Password"
+        id="new-password"
         icon="key"
         v-model="form.password"
         type="password"
@@ -46,6 +48,7 @@ const submit = () => {
       />
       <Input
         label="Confirm New Password"
+        id="new-password-confirmation"
         icon="key"
         v-model="form.password_confirmation"
         type="password"

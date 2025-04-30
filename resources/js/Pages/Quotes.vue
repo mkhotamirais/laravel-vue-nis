@@ -79,6 +79,7 @@ const deleteQuote = (q) => {
           <Textarea
             placeholder="Quote Content..."
             label="Content"
+            id="content"
             rows="3"
             icon="quote-right"
             v-model="form.content"
@@ -86,6 +87,7 @@ const deleteQuote = (q) => {
           />
           <Input
             label="Author (nama, buku atau sumber lainya)"
+            id="author"
             placeholder="Ahmad, Kitab, lainnya.."
             icon="user"
             v-model="form.author"
@@ -114,6 +116,7 @@ const deleteQuote = (q) => {
               <Textarea
                 placeholder="Quote Content..."
                 label="Content"
+                id="update-content"
                 rows="3"
                 icon="quote-right"
                 v-model="editForm.content"
@@ -121,6 +124,7 @@ const deleteQuote = (q) => {
               />
               <Input
                 label="Author (nama, buku atau sumber lainya)"
+                id="update-author"
                 placeholder="Ahmad, Kitab, lainnya.."
                 icon="user"
                 v-model="editForm.author"

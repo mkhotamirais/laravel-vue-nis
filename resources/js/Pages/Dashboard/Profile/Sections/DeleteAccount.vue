@@ -30,6 +30,7 @@ const submit = () => {
       <form @submit.prevent="submit" class="space-y-6">
         <Input
           label="Confirm Password"
+          id="confirm-password"
           v-model="form.password"
           icon="key"
           class="w-1/2"

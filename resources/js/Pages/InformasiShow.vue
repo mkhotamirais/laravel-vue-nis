@@ -29,14 +29,18 @@ defineProps({
         </div>
 
         <img
-          :src="`/storage/${info.banner}`"
+          :src="
+            info.banner
+              ? `/storage/${info.banner}`
+              : '/storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
+          "
           :alt="smartTrim(info.title, 100)"
           class="w-full rounded-md mb-6"
           width="500"
           height="300"
           loading="lazy"
         />
-        <p class="leading-7 first-letter:uppercase">{{ info.content }}</p>
+        <p class="text-content" v-html="info.content"></p>
       </article>
       <div class="min-w-full md:min-w-80 sticky top-24">
         <div class="mb-2">

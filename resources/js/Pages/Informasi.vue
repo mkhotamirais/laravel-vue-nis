@@ -151,9 +151,10 @@ const selectTag = (tag) => {
                   {{ tag }}
                 </button>
               </div>
-              <p class="text-gray-700 flex-1">
-                {{ smartTrim(info.content, 250) }}
-              </p>
+              <p
+                class="text-gray-700 flex-1"
+                v-html="smartTrim(info.content, 250)"
+              ></p>
               <p class="mb-2 text-sm text-gray-500">
                 {{ diffForHumans(info.created_at) }}
               </p>

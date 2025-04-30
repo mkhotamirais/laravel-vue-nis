@@ -2,6 +2,7 @@
 const model = defineModel();
 defineProps({
   label: String,
+  id: String,
   icon: String,
   placeholder: { type: String, default: "" },
   type: { type: String, default: "text" },
@@ -12,7 +13,7 @@ defineProps({
 
 <template>
   <div class="mb-3 w-full">
-    <label :for="label" class="block text-sm font-medium text-slate-700">{{
+    <label :for="id" class="block text-sm font-medium text-slate-700">{{
       label
     }}</label>
     <div class="relative mt-1 rounded-md">
@@ -24,7 +25,7 @@ defineProps({
         </span>
       </div>
       <textarea
-        :id="label"
+        :id="id"
         :rows="rows"
         :placeholder="placeholder"
         v-model="model"
