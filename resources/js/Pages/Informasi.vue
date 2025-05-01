@@ -110,22 +110,26 @@ const selectTag = (tag) => {
             <div
               v-for="(info, i) in infos.data"
               :key="i"
-              class="relative h-full md:h-48 rounded overflow-hidden md:flex md:flex-row sm:gap-6 mb-6"
+              class="relative h-full md:h-56 rounded overflow-hidden md:grid md:grid-cols-3 mb-6 gap-6"
             >
-              <img
-                :src="
-                  info.banner
-                    ? 'storage/' + info.banner
-                    : 'storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
-                "
-                :alt="info.title"
-                width="500"
-                height="300"
-                loading="lazy"
-                :class="`object-cover h-56 md:h-full w-full md:w-56 bg-gray-100 mb-4`"
-              />
+              <div class="md:col-span-1">
+                <img
+                  :src="
+                    info.banner
+                      ? 'storage/' + info.banner
+                      : 'storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
+                  "
+                  :alt="info.title"
+                  width="500"
+                  height="300"
+                  loading="lazy"
+                  :class="`object-cover h-56 md:h-full w-full bg-gray-100 mb-4`"
+                />
+              </div>
 
-              <article class="relative w-auto flex flex-col h-full space-y-2">
+              <article
+                class="md:col-span-2 relative flex flex-col h-full space-y-2"
+              >
                 <Link
                   :href="route('informasi.show', info)"
                   class="hover:underline w-fit"

@@ -51,7 +51,7 @@ defineProps({
             <Line />
           </div>
           <div>
-            <div v-for="(info, i) in latestInfos" :key="i">
+            <div v-for="(info, i) in latestInfos" :key="i" class="">
               <Link
                 :href="route('informasi.show', info)"
                 class="mb-4 group flex h-20 gap-3 rounded-md overflow-hidden"
@@ -64,7 +64,7 @@ defineProps({
                   "
                   :alt="smartTrim(info.title, 100)"
                   loading="lazy"
-                  class="h-full w-24 object-cover object-center"
+                  class="h-full !w-24 object-cover object-center"
                   width="500"
                   height="300"
                 />
