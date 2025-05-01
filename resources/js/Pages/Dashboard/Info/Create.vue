@@ -11,7 +11,7 @@ defineProps({ infocats: Object });
 
 const form = useForm({
   title: null,
-  infocat_id: "",
+  infocat_id: null,
   content: "",
   tags: null,
   banner: null,

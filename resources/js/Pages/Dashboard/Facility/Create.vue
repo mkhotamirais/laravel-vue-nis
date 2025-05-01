@@ -10,7 +10,7 @@ defineProps({ facilitycats: Object });
 
 const form = useForm({
   name: "",
-  facilitycat_id: "",
+  facilitycat_id: null,
   caption: "",
   banner: null,
   images: [],

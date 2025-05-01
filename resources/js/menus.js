@@ -51,28 +51,28 @@ export const logos = [
 export const branchs = [
     {
         title: "RA",
-        url: "/ra/profile",
+        url: "/profile-ra",
         total: "25+",
         logo: "/storage/images/logos/logo-ra-nurul-iman-sindangkerta.png",
         altLogo: "Logo ra nurul iman sindangkerta",
     },
     {
         title: "Ponpes",
-        url: "/ponpes/profile",
+        url: "/profile-ponpes",
         total: "210+",
         logo: "/storage/images/logos/logo-ponpes-nurul-iman-sindangkerta.png",
         altLogo: "Logo ponpes nurul iman sindangkerta",
     },
     {
         title: "MA",
-        url: "/ma/profile",
+        url: "/profile-ma",
         total: "290+",
         logo: "/storage/images/logos/logo-ma-nurul-iman-sindangkerta.png",
         altLogo: "Logo ma nurul iman sindangkerta",
     },
     {
         title: "MTs",
-        url: "/mts/profile",
+        url: "/profile-mts",
         total: "140+",
         logo: "/storage/images/logos/logo-mts-nurul-iman-sindangkerta.png",
         altLogo: "Logo mts nurul iman sindangkerta",
