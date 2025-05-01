@@ -122,10 +122,10 @@ const selectTag = (tag) => {
                 width="500"
                 height="300"
                 loading="lazy"
-                :class="`object-cover h-full w-full md:w-56 bg-gray-100`"
+                :class="`object-cover h-56 md:h-full w-full md:w-56 bg-gray-100 mb-4`"
               />
 
-              <article class="relative w-full flex flex-col h-full space-y-2">
+              <article class="relative w-auto flex flex-col h-full space-y-2">
                 <Link
                   :href="route('informasi.show', info)"
                   class="hover:underline w-fit"
@@ -193,7 +193,7 @@ const selectTag = (tag) => {
           </button> -->
 
             <!-- Info MA -->
-            <h3 class="h3-left">Informasi MA</h3>
+            <h3 class="h3-left first-letter:uppercase">Informasi MA</h3>
             <button
               v-for="(ic, i) in infocatsMa"
               @click="searchCategory(ic.name)"

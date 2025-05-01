@@ -55,7 +55,7 @@ const submit = () => {
         v-model="form.infocat_id"
         :error="form.errors.infocat_id"
       >
-        <option value="">Pilih Kategori</option>
+        <option :value="null">Pilih Kategori</option>
         <template v-for="(ic, i) in infocats" :key="i">
           <option
             v-if="user.role === 'admin' || user.role === ic.user.role"
