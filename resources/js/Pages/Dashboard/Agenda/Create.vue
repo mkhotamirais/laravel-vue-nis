@@ -1,7 +1,6 @@
 <script setup>
 import Input from "@/Components/Input.vue";
 import Textarea from "@/Components/Textarea.vue";
-import TextareaCke from "@/Components/TextareaCke.vue";
 import { useForm } from "@inertiajs/vue3";
 import { ref, watch } from "vue";
 
@@ -40,16 +39,10 @@ const submit = () => {
         v-model="form.title"
         :error="form.errors.name"
       />
-      <!-- <Textarea
+      <Textarea
         label="Description"
         icon="newspaper"
         placeholder="Deskripsi.."
-        v-model="form.description"
-        :error="form.errors.description"
-      /> -->
-      <TextareaCke
-        label="Description"
-        id="description"
         v-model="form.description"
         :error="form.errors.description"
       />

@@ -61,17 +61,11 @@ const submit = () => {
         v-model="form.description"
         :error="form.errors.description"
       />
-      <!-- <Textarea
-        label="Jadwal"
-        id="jadwal"
-        icon="clock"
-        placeholder="Jadwal ekskul.."
-        v-model="form.schedule"
-        :error="form.errors.schedule"
-      /> -->
-      <TextareaCke
+      <Input
         label="Jadwal"
         id="schedule"
+        icon="clock"
+        placeholder="Jadwal ekskul.."
         v-model="form.schedule"
         :error="form.errors.schedule"
       />

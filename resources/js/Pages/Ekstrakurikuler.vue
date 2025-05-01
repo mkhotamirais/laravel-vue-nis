@@ -77,50 +77,50 @@ const deleteEkskul = (ec) => {
         </button>
       </div>
       <div v-if="extracurriculars.data.length">
-        <div v-for="(ec, i) in extracurriculars.data" :key="i" class="">
-          <div
-            class="relative grid grid-cols-1 sm:grid-cols-3 gap-x-0 md:gap-x-4 mb-6 bg-white rounded-lg overflow-hidden shadow-md"
-          >
-            <div
-              v-if="
-                (user && user.role == ec.user?.role) ||
-                (user && user.role == 'admin')
-              "
-              class="mb-4 absolute right-0 top-0"
-            >
-              <Link :href="route('ekstrakurikuler.edit', ec)" class="link"
-                >ubah</Link
-              >
-              |
-              <button class="link !text-red-500" @click="deleteEkskul(ec)">
-                hapus
-              </button>
-            </div>
-
-            <div>
-              <img
-                :src="`/storage/${ec.banner}`"
-                :alt="ec.name"
-                class="h-full w-full object-cover object-center"
-                loading="lazy"
-              />
-            </div>
-            <article class="col-span-2 space-y-2 rounded-lg p-4">
+        <div class="">
+          <div v-for="(ec, i) in extracurriculars.data" :key="i" class="">
+            <div class="relative space-y-3 h-full mb-6">
               <h2 class="h2 mb-2">{{ ec.name }}</h2>
               <div class="badge">{{ categoryRole(ec.user.role) }}</div>
-              <h3 class="h3">
-                Pembimbing : <span class="text-gray-600">{{ ec.mentor }}</span>
-              </h3>
-              <h3 class="h3">
-                Jadwal : <span class="text-gray-600">{{ ec.schedule }}</span>
-              </h3>
+              <img
+                :src="
+                  ec.banner
+                    ? `/storage/${ec.banner}`
+                    : '/storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
+                "
+                :alt="ec.name"
+                class="object-cover object-center rounded-lg bg-gray-100 sm:float-left w-full sm:w-96 h-60 mr-4 mb-4"
+                loading="lazy"
+              />
+
+              <h3 class="h3">Pembimbing</h3>
+              <p class="first-letter:uppercase">{{ ec.mentor }}</p>
+              <h3 class="h3">Jadwal</h3>
+              <p>{{ ec.schedule }}</p>
               <div>
-                <h3 class="h3">Deskripsi :</h3>
-                <p>{{ ec.description }}</p>
+                <h3 class="h3">Deskripsi</h3>
+
+                <article v-html="ec.description" class="text-content"></article>
               </div>
-            </article>
+              <div
+                v-if="
+                  (user && user.role == ec.user?.role) ||
+                  (user && user.role == 'admin')
+                "
+                class=""
+              >
+                <Link :href="route('ekstrakurikuler.edit', ec)" class="link"
+                  >ubah</Link
+                >
+                |
+                <button class="link !text-red-500" @click="deleteEkskul(ec)">
+                  hapus
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+
         <div>
           <PaginationInput :paginator="extracurriculars" />
         </div>

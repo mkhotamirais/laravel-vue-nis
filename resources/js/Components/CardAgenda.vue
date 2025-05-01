@@ -25,10 +25,12 @@ defineProps({
         <b>s.d.</b>
         {{ formatTime(a.end_time) }}
       </div>
-      <p class="first-letter:uppercase">
+      <div class="text-gray-600">
         <i class="fa-solid fa-info-circle mr-2 text-black"></i>
-        {{ a.description }}
-      </p>
+        <p class="first-letter:uppercase inline-block">
+          {{ a.description }}
+        </p>
+      </div>
       <slot></slot>
     </article>
   </div>

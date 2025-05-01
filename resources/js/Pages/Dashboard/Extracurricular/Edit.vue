@@ -1,6 +1,7 @@
 <script setup>
 import Input from "@/Components/Input.vue";
 import Textarea from "@/Components/Textarea.vue";
+import TextareaCke from "@/Components/TextareaCke.vue";
 import ImageUpload from "@/Components/ImageUpload.vue";
 
 import { useForm } from "@inertiajs/vue3";
@@ -72,16 +73,11 @@ const submit = () => {
         v-model="form.description"
         :error="form.errors.description"
       />
-      <!-- <Textarea
-        label="Jadwal"
-        icon="clock"
-        placeholder="Jadwal ekskul.."
-        v-model="form.schedule"
-        :error="form.errors.schedule"
-      /> -->
-      <TextareaCke
+      <Input
         label="Jadwal"
         id="schedule"
+        icon="clock"
+        placeholder="Jadwal ekskul.."
         v-model="form.schedule"
         :error="form.errors.schedule"
       />
