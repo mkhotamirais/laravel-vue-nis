@@ -20,10 +20,41 @@ import MyBg from "@/Components/MyBg.vue";
   <section class="py-12 relative overflow-hidden">
     <MyBg position="left" />
     <div class="container">
+      <!-- Videos -->
+      <section class="mb-8">
+        <div class="mb-4">
+          <h2 class="h2">Tentang MA Nurul Iman</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <iframe
+            class="w-full rounded-lg overflow-hidden"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/sZ_BnCo-TSA?si=3ZtDWRmo5eShyXgX"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="w-full rounded-lg overflow-hidden"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Y2-C3hYTHQI?si=hZLqOse776vvY-SN"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
       <!-- Sambutan -->
       <div class="mb-8 max-w-2xl">
         <div class="mb-4">
-          <h2 class="h2">Sambutan Kepala MA Nurul Iman Sindangkerta</h2>
+          <h2 class="h2">Sambutan Kepala MA Nurul Iman</h2>
           <h3 class="h3">KH. Jaeni Marjuki, M.Ag</h3>
         </div>
         <article class="leading-relaxed space-y-2">
@@ -36,7 +67,7 @@ import MyBg from "@/Components/MyBg.vue";
             height="200"
             width="150"
             loading="lazy"
-            class="float-left w-56 mr-4 mb-4"
+            class="float-left w-40 lg:w-56 mr-4 mb-4"
           />
           <p>
             Segala puji bagi Allah SWT, Tuhan semesta alam, yang telah
@@ -145,7 +176,7 @@ import MyBg from "@/Components/MyBg.vue";
       <!-- Sejarah -->
       <div class="mb-8 max-w-2xl">
         <div class="mb-4">
-          <h2 class="h2">Sejarah MA Nurul Iman Sindangkerta</h2>
+          <h2 class="h2">Sejarah MA Nurul Iman</h2>
         </div>
 
         <article class="leading-relaxed space-y-2">

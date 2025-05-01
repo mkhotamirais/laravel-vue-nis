@@ -35,14 +35,14 @@ import { contactMenus, socialsMenus } from "../menus";
           <div v-for="(item, i) in contactMenus" :key="i">
             <h3 class="h3 mb-2">{{ item.title }}</h3>
             <div v-if="item.subMenus.length">
-              <Link
+              <a
                 v-for="(itm, j) in item.subMenus"
                 :key="j"
                 :href="itm.url"
                 class="link w-fit pb-2 flex items-center gap-2"
               >
                 <i :class="`${itm.icon}`"></i>
-                {{ itm.title }}</Link
+                {{ itm.title }}</a
               >
             </div>
             <div v-else>-</div>
@@ -53,14 +53,14 @@ import { contactMenus, socialsMenus } from "../menus";
           <div v-for="(item, i) in socialsMenus" :key="i">
             <h3 class="h3 mb-2">{{ item.title }}</h3>
             <div v-if="item.subMenus.length">
-              <Link
+              <a
                 v-for="(itm, j) in item.subMenus"
                 :key="j"
                 :href="itm.url"
                 class="link w-fit pb-2 flex items-center gap-2"
               >
                 <i :class="`${itm.icon}`"></i>
-                {{ itm.title }}</Link
+                {{ itm.title }}</a
               >
             </div>
             <div v-else>-</div>

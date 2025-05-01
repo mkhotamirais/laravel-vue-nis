@@ -28,18 +28,28 @@ import { logos } from "../menus";
         class="flex flex-col md:flex-row items-center gap-0 md:gap-6 *:text-primary"
       >
         <div class="order-2 md:order-1">
-          <a href="https://mailto:nuruliman@gmail.com" class=""
-            >nuruliman@gmail.com</a
-          >
+          <a href="/kontak" class="inline-block">nuruliman@gmail.com</a>
         </div>
         <div class="flex order-1 md:order-2">
-          <a href="#" aria-label="Kunjungi Facebook" class="p-2 px-3">
+          <a
+            href="/kontak"
+            aria-label="Kunjungi Facebook"
+            class="p-2 px-3 text-lg"
+          >
             <i class="fa-brands fa-facebook"></i>
           </a>
-          <a href="#" aria-label="Kunjungi Instagram" class="p-2 px-3">
+          <a
+            href="/kontak"
+            aria-label="Kunjungi Instagram"
+            class="p-2 px-3 text-lg"
+          >
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="#" aria-label="Kunjungi Twitter" class="p-2 px-3">
+          <a
+            href="/kontak"
+            aria-label="Kunjungi Twitter"
+            class="p-2 px-3 text-lg"
+          >
             <i class="fa-brands fa-twitter"></i>
           </a>
         </div>
