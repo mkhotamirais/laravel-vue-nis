@@ -89,9 +89,9 @@ export const footerMenus1 = [
 
 export const footerMenus2 = [
     { title: "Masuk", url: "/login" },
-    { title: "Profile Ponpes", url: "/ponpes/profile" },
-    { title: "Profile RA", url: "/ra/profile" },
-    { title: "Profile MTs", url: "/mts/profile" },
+    { title: "Profile Ponpes", url: "/profile-ponpes" },
+    { title: "Profile RA", url: "/profile-ra" },
+    { title: "Profile MTs", url: "/profile-mts" },
     {
         title: "Profile MA",
         url: "https://appmadrasah.kemenag.go.id/web/profile?nsm=131232170036",
