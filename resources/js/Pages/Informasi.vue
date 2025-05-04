@@ -112,7 +112,10 @@ const selectTag = (tag) => {
               :key="i"
               class="relative h-full md:h-56 rounded overflow-hidden md:grid md:grid-cols-3 mb-6 gap-6"
             >
-              <div class="md:col-span-1">
+              <Link
+                :href="route('informasi.show', info)"
+                class="block md:col-span-1"
+              >
                 <img
                   :src="
                     info.banner
@@ -125,10 +128,10 @@ const selectTag = (tag) => {
                   loading="lazy"
                   :class="`object-cover h-56 md:h-full w-full bg-gray-100 mb-4`"
                 />
-              </div>
+              </Link>
 
               <article
-                class="md:col-span-2 relative flex flex-col h-full space-y-2"
+                class="md:col-span-2 relative flex flex-col h-full md:h-56 space-y-2"
               >
                 <Link
                   :href="route('informasi.show', info)"
@@ -139,7 +142,7 @@ const selectTag = (tag) => {
                   </h3>
                 </Link>
 
-                <div class="flex gap-2 items-center">
+                <div class="flex gap-x-2 gap-y-1 items-center flex-wrap">
                   <button
                     v-if="info.infocat"
                     @click="searchCategory(info.infocat.name)"
@@ -162,7 +165,7 @@ const selectTag = (tag) => {
                   class="text-gray-700 flex-1"
                   v-html="smartTrim(info.content, 250)"
                 ></p>
-                <p class="mb-2 text-sm text-gray-500">
+                <p class="mt-auto text-sm text-gray-500">
                   {{ diffForHumans(info.created_at) }}
                 </p>
               </article>

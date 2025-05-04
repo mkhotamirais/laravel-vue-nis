@@ -45,23 +45,23 @@ const selectTag = (tag) => {
         <div
           v-for="(info, i) in infos"
           :key="i"
-          class="flex flex-col rounded-md overflow-hidden space-y-4"
+          class="flex flex-col rounded-md overflow-hidden space-y-3"
         >
-          <img
-            :src="`/storage/${info.banner}`"
-            :alt="smartTrim(info.title, 100)"
-            class="h-48 w-full object-cover object-center"
-            width="400"
-            height="300"
-            loading="lazy"
-          />
-          <Link :href="route('informasi.show', info)" class="hover:underline">
-            <h3 class="h3">
+          <Link :href="route('informasi.show', info)" class="group">
+            <img
+              :src="`/storage/${info.banner}`"
+              :alt="smartTrim(info.title, 100)"
+              class="h-48 w-full object-cover object-center mb-3"
+              width="400"
+              height="300"
+              loading="lazy"
+            />
+            <h3 class="h3 group-hover:underline">
               {{ smartTrim(info.title, 50) }}
             </h3>
           </Link>
 
-          <div class="flex gap-2 items-center overflow-x-scroll">
+          <div class="flex gap-x-2 gap-y-1 items-center flex-wrap">
             <button
               @click="searchCategory(info.infocat.name)"
               class="badge min-w-fit"

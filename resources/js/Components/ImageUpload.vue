@@ -14,7 +14,7 @@ const showRevertBtn = ref(false);
 
 const imageSelected = (e) => {
   preview.value = URL.createObjectURL(e.target.files[0]);
-  oversizedImage.value = e.target.files[0].size > 1048000;
+  oversizedImage.value = e.target.files[0].size > 2048000;
   showRevertBtn.value = true;
   emit("image", e.target.files[0]);
 };
@@ -34,8 +34,8 @@ const revertImageChange = () => {
     >
       {{
         oversizedImage
-          ? "The selected image exceeds 1MB"
-          : "Banner (Max size 1Mb)"
+          ? "The selected image exceeds 2MB"
+          : "Banner (Max size 2Mb)"
       }}
     </span>
     <label

@@ -52,7 +52,7 @@ a {
 }
 
 .badge {
-    @apply rounded-xs bg-secondary-dark text-white px-2 py-1 text-xs w-fit leading-none h-fit;
+    @apply rounded-xs bg-secondary-dark text-white px-2 py-1 text-xs w-max leading-none h-fit;
 }
 
 .link {

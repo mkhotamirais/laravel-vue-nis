@@ -1,5 +1,5 @@
 <script setup>
-import { formatTime } from "../functions";
+import { formatTime, smartTrim } from "../functions";
 
 defineProps({
   a: Object,
@@ -7,10 +7,12 @@ defineProps({
 </script>
 
 <template>
-  <div class="rounded-lg overflow-hidden shadow-lg">
+  <div class="rounded-lg overflow-hidden shadow-lg h-full flex flex-col">
     <h3
-      class="h3 !text-white bg-primary p-4 text-center first-letter:uppercase"
+      class="h3 !text-white bg-primary p-4 text-center first-letter:uppercase h-28 flex justify-center overflow-y-scroll"
+      :class="a.title.length < 56 ? 'items-center' : ''"
     >
+      <!-- {{ smartTrim(a.title, 56) }} -->
       {{ a.title }}
     </h3>
     <article class="bg-white p-4 space-y-2">
@@ -25,13 +27,17 @@ defineProps({
         <b>s.d.</b>
         {{ formatTime(a.end_time) }}
       </div>
-      <div class="text-gray-600">
-        <i class="fa-solid fa-info-circle mr-2 text-black"></i>
-        <p class="first-letter:uppercase inline-block">
-          {{ a.description }}
-        </p>
-      </div>
+      <p class="text-gray-600">
+        <i class="fa-solid fa-info-circle mr-2 text-black inline"></i>
+        {{ a.description }}
+      </p>
       <slot></slot>
     </article>
   </div>
 </template>
+
+<style scoped>
+::-webkit-scrollbar {
+  display: none;
+}
+</style>

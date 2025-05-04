@@ -30,7 +30,7 @@ export const userMenus = [
     { title: "Facility Category", url: "/facility-category", icon: "images" },
     { title: "Quotes", url: "/quote", icon: "quote-left" },
     { title: "Ekstrakurikuler", url: "/ekstrakurikuler", icon: "futbol" },
-    { title: "Pengumuman & Agenda", url: "/agenda", icon: "calendar-days" },
+    { title: "Agenda & Pengumuman", url: "/agenda", icon: "calendar-days" },
 ];
 
 export const logos = [

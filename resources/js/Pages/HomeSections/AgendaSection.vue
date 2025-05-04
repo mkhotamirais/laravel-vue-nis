@@ -17,7 +17,7 @@ defineProps({
         title="Informasi agenda dan pengumuman penting seputar kegiatan sekolah terkini"
       />
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div v-for="(a, i) in agendas" :key="i">
+        <div v-for="(a, i) in agendas" :key="i" class="">
           <CardAgenda :a="a" />
         </div>
       </div>

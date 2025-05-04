@@ -21,13 +21,13 @@ class Agenda extends Model
         $now = Carbon::now();
 
         if ($this->start_time > $now) {
-            return 'upcoming';
+            return 'belum dimulai';
         }
 
         if ($this->end_time && $now > $this->end_time) {
-            return 'completed';
+            return 'selesai';
         }
 
-        return 'ongoing';
+        return 'berlangsung';
     }
 }

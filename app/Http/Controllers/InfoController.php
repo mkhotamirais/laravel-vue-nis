@@ -72,7 +72,7 @@ class InfoController extends Controller
             'infocat_id' => 'required|exists:infocats,id',
             'content' => 'required|string',
             'tags' => 'nullable|string',
-            'banner' => 'nullable|file|max:2084|mimes:jpg,jpeg,png,webp',
+            'banner' => 'nullable|file|max:2048|mimes:jpg,jpeg,png,webp',
         ]);
 
         if ($request->hasFile('banner')) {

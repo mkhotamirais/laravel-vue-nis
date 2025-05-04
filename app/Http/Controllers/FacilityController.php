@@ -38,8 +38,8 @@ class FacilityController extends Controller
             'name' => 'required|max:255|unique:facilities',
             'facilitycat_id' => 'required|exists:facilitycats,id',
             'caption' => 'required|string',
-            'banner' => 'required|file|max:2084|mimes:jpg,jpeg,png,webp',
-            'images.*' => 'file|max:1084|mimes:jpg,jpeg,png,webp'
+            'banner' => 'required|file|max:2048|mimes:jpg,jpeg,png,webp',
+            'images.*' => 'file|max:2048|mimes:jpg,jpeg,png,webp'
         ]);
 
         if ($request->hasFile('banner')) {

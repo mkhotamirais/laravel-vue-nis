@@ -80,18 +80,22 @@ const deleteEkskul = (ec) => {
         <div class="">
           <div v-for="(ec, i) in extracurriculars.data" :key="i" class="">
             <div class="relative space-y-3 h-full mb-6">
-              <h2 class="h2 mb-2">{{ ec.name }}</h2>
-              <div class="badge">{{ categoryRole(ec.user.role) }}</div>
-              <img
-                :src="
-                  ec.banner
-                    ? `/storage/${ec.banner}`
-                    : '/storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
-                "
-                :alt="ec.name"
-                class="object-cover object-center rounded-lg bg-gray-100 sm:float-left w-full sm:w-96 h-60 mr-4 mb-4"
-                loading="lazy"
-              />
+              <div class="mb-3">
+                <h2 class="h2 mb-2">{{ ec.name }}</h2>
+                <div class="badge">{{ categoryRole(ec.user.role) }}</div>
+              </div>
+              <a :href="`/storage/${ec.banner}`" class="block float-left">
+                <img
+                  :src="
+                    ec.banner
+                      ? `/storage/${ec.banner}`
+                      : '/storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
+                  "
+                  :alt="ec.name"
+                  class="object-cover object-center rounded-lg bg-gray-100 sm:float-left w-full sm:w-80 h-48 mr-4 mb-4"
+                  loading="lazy"
+                />
+              </a>
 
               <h3 class="h3">Pembimbing</h3>
               <p class="first-letter:uppercase">{{ ec.mentor }}</p>
