@@ -25,22 +25,23 @@ defineProps({ heroImages: Object });
           <p class="text-xl lg:text-2xl font-medium">
             "Lembur ilmu, Majelis disiplin, Kancah ibadah dan Wahana perjuangan
           </p>
-          <div class="mt-8 flex flex-col md:flex-row gap-4">
+          <div class="mt-8 flex gap-4">
             <Link
               :href="route('ppdb')"
-              class="block w-fit py-3 md:py-4 text-lg px-8 rounded-full bg-primary hover:bg-primary-dark transition-all text-white"
+              class="block w-fit py-4 text-lg px-8 rounded-full bg-primary hover:bg-primary-dark transition-all text-white"
             >
               Daftar
             </Link>
             <a
               href="#agenda"
-              class="block w-fit py-3 md:py-4 text-lg px-8 rounded-full border border-primary hover:bg-primary hover:text-white transition-all"
+              class="block w-fit py-4 text-lg px-8 rounded-full border border-primary hover:bg-primary hover:text-white transition-all"
               >Agenda</a
             >
           </div>
         </div>
-        <div class="" v-if="heroImages && heroImages.length">
+        <div class="">
           <swiper-container
+            v-if="heroImages && heroImages.length"
             slides-per-view="1"
             speed="1000"
             :navigation="false"

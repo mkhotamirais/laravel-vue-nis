@@ -14,8 +14,8 @@
     --font-cairo: "Cairo", sans-serif;
     --color-primary: #008000;
     --color-primary-dark: #006400;
-    --color-secondary: #8cd447;
-    --color-secondary-dark: #8dc42f;
+    --color-secondary: #008057;
+    --color-secondary-dark: #00734e;
 }
 
 html {
@@ -52,7 +52,7 @@ a {
 }
 
 .badge {
-    @apply rounded-xs bg-secondary-dark text-white px-2 py-1 text-xs w-max leading-none h-fit;
+    @apply rounded-xs bg-secondary text-white px-2 py-1 text-xs w-max leading-none h-fit;
 }
 
 .link {
