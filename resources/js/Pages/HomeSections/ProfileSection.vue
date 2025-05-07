@@ -36,8 +36,8 @@ import TitleSection from "@/Components/TitleSection.vue";
           <img
             :src="branch.logo"
             :alt="branch.altLogo"
-            width="50"
-            height="50"
+            width="200"
+            height="200"
             class="absolute left-2 top-2 w-8"
             loading="lazy"
           />

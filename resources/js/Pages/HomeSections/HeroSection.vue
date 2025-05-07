@@ -41,6 +41,7 @@ defineProps({ heroImages: Object });
         </div>
         <div class="">
           <swiper-container
+            v-if="heroImages && heroImages.length"
             slides-per-view="1"
             speed="1000"
             :navigation="false"
@@ -49,6 +50,7 @@ defineProps({ heroImages: Object });
             effect="fade"
             loop="true"
             :autoplay="{ delay: 8000, disableOnInteraction: false }"
+            lazy="true"
           >
             <swiper-slide
               v-for="(hi, i) in heroImages"
@@ -59,8 +61,9 @@ defineProps({ heroImages: Object });
                 width="400"
                 height="300"
                 :src="`/storage/${hi.banner}`"
-                :alt="hi.name ? hi.name : 'nurul iman hero image'"
+                :alt="hi?.name || 'nurul iman hero image'"
                 class="object-cover object-center w-full h-80 lg:h-96 rounded-2xl"
+                loading="lazy"
               />
             </swiper-slide>
           </swiper-container>
