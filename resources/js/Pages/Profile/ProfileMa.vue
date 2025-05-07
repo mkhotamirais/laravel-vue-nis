@@ -20,37 +20,6 @@ import MyBg from "@/Components/MyBg.vue";
   <section class="py-12 relative overflow-hidden">
     <MyBg position="left" />
     <div class="container">
-      <!-- Videos -->
-      <section class="mb-8">
-        <div class="mb-4">
-          <h2 class="h2">Tentang MA Nurul Iman</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <iframe
-            class="w-full rounded-lg overflow-hidden"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/sZ_BnCo-TSA?si=3ZtDWRmo5eShyXgX"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-          <iframe
-            class="w-full rounded-lg overflow-hidden"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/Y2-C3hYTHQI?si=hZLqOse776vvY-SN"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
-
       <!-- Sambutan -->
       <div class="mb-8 max-w-2xl">
         <div class="mb-4">
@@ -123,6 +92,38 @@ import MyBg from "@/Components/MyBg.vue";
           </p>
         </article>
       </div>
+
+      <!-- Videos -->
+      <section class="mb-8">
+        <div class="mb-4">
+          <h2 class="h2">Tentang MA Nurul Iman</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <iframe
+            class="w-full rounded-lg overflow-hidden"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/sZ_BnCo-TSA?si=3ZtDWRmo5eShyXgX"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            class="w-full rounded-lg overflow-hidden"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Y2-C3hYTHQI?si=hZLqOse776vvY-SN"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
       <!-- Visi, Misi dan Tujuan -->
       <div class="mb-8 max-w-2xl">
         <div class="mb-4">

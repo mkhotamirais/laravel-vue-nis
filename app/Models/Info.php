@@ -30,7 +30,11 @@ class Info extends Model
     public function scopeFilter($query, array $filters)
     {
         if ($filters['search'] ?? false) {
-            $query->where('title', 'like', '%' . request('search') . '%');
+            $query->where(function ($q) {
+                $search = str_replace('-', ' ', request('search'));
+                $q->where('title', 'like', '%' . $search . '%')
+                    ->orWhere('tags', 'like', '%' . $search . '%');
+            });
         }
 
         if ($filters['category'] ?? false) {

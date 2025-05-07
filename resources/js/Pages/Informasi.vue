@@ -87,7 +87,10 @@ const selectTag = (tag) => {
           >
             <span> Hasil untuk </span>
             <span v-if="params.search">
-              pencarian <i class="text-primary">"{{ params.search }}"</i>
+              pencarian
+              <i class="text-primary"
+                >"{{ params.search.replace(/-/g, " ") }}"</i
+              >
             </span>
             <span v-if="params.category">
               kategori

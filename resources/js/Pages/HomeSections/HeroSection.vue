@@ -54,13 +54,13 @@ defineProps({ heroImages: Object });
               v-for="(hi, i) in heroImages"
               :key="i"
               class="overflow-hidden p-0 md:p-8"
-              lazy="true"
+              :lazy="true"
             >
               <img
                 width="400"
                 height="300"
                 :src="`/storage/${hi.banner}`"
-                :alt="hi.name"
+                :alt="hi.name ? hi.name : 'nurul iman hero image'"
                 class="object-cover object-center w-full h-80 lg:h-96 rounded-2xl"
                 loading="lazy"
               />
