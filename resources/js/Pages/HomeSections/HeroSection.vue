@@ -39,7 +39,7 @@ defineProps({ heroImages: Object });
             >
           </div>
         </div>
-        <!-- <div class="">
+        <div class="">
           <swiper-container
             v-if="heroImages && heroImages.length"
             slides-per-view="1"
@@ -71,7 +71,7 @@ defineProps({ heroImages: Object });
               />
             </swiper-slide>
           </swiper-container>
-        </div> -->
+        </div>
       </div>
     </div>
   </section>
