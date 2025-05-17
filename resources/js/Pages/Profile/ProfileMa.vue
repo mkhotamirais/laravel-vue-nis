@@ -5,7 +5,7 @@ import MyBg from "@/Components/MyBg.vue";
 
 <template>
   <Head>
-    <title>Profile MA</title>
+    <title>Profil Madrasah Aliyah</title>
     <meta
       head-key="description"
       name="description"

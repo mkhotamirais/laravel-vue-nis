@@ -4,7 +4,7 @@ import SectionHero from "@/Components/SectionHero.vue";
 
 <template>
   <Head>
-    <title>Profile Ponpes</title>
+    <title>Profil Pondok Pesantren</title>
     <meta
       head-key="description"
       name="description"

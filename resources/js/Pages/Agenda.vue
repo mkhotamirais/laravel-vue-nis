@@ -25,7 +25,7 @@ const user = computed(() => page.props.auth.user);
 
 <template>
   <Head>
-    <title>Agenda</title>
+    <title>Agenda Rutin dan Event</title>
     <meta
       head-key="description"
       name="description"

@@ -57,7 +57,7 @@ const deleteQuote = (q) => {
 
 <template>
   <Head>
-    <title>Fasilitas</title>
+    <title>Kumpulan Quotes Motifasi Islami</title>
     <meta
       head-key="description"
       name="description"

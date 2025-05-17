@@ -6,7 +6,7 @@ import { contactMenus, socialsMenus } from "../menus";
 
 <template>
   <Head>
-    <title>Kontak</title>
+    <title>Kontak dan Alamat Lengkap</title>
     <meta
       head-key="description"
       name="description"

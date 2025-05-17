@@ -4,7 +4,7 @@ import SectionHero from "@/Components/SectionHero.vue";
 
 <template>
   <Head>
-    <title>Profile RA</title>
+    <title>Profile Raudhatul Athfal</title>
     <meta
       head-key="description"
       name="description"

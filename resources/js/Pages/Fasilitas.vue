@@ -23,7 +23,7 @@ const user = computed(() => page.props.auth.user);
 
 <template>
   <Head>
-    <title>Fasilitas</title>
+    <title>Fasilitas dan Galeri Sekolah</title>
     <meta
       head-key="description"
       name="description"

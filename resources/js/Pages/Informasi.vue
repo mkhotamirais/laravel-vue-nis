@@ -54,7 +54,7 @@ const selectTag = (tag) => {
 
 <template>
   <Head>
-    <title>Informasi</title>
+    <title>Informasi: Berita, Artikel, Kegiatan Sekolah</title>
     <meta
       head-key="description"
       name="description"

@@ -17,7 +17,14 @@ defineProps({
 </script>
 
 <template>
-  <Head title="Home" />
+  <Head>
+    <title>Pendidikan Lengkap: Ponpes, RA, MTs, MA</title>
+    <meta
+      head-key="description"
+      name="description"
+      content="Sekolah Nurul Iman menawarkan pendidikan terpadu dari Ponpes, RA, MTs, hingga MA dengan kurikulum modern dan nilai-nilai islami."
+    />
+  </Head>
   <HeroSection :heroImages="heroImages" />
   <ProfileSection />
   <InformationSection :infos="infos" />

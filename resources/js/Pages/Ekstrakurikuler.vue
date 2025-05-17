@@ -42,7 +42,7 @@ const deleteEkskul = (ec) => {
 
 <template>
   <Head>
-    <title>Ekstrakurikuler</title>
+    <title>Program Ekstrakurikuler Unggulan</title>
     <meta
       head-key="description"
       name="description"
