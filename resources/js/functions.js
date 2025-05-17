@@ -51,4 +51,10 @@ function formatTime(datetime) {
     return `${hari}, ${tanggal} - Jam ${jam}`;
 }
 
-export { diffForHumans, smartTrim, formatTime };
+function stripHtml(html) {
+    const div = document.createElement("div");
+    div.innerHTML = html;
+    return div.textContent || div.innerText || "";
+}
+
+export { diffForHumans, smartTrim, formatTime, stripHtml };

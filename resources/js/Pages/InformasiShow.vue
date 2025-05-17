@@ -1,5 +1,5 @@
 <script setup>
-import { diffForHumans, smartTrim } from "@/functions";
+import { diffForHumans, smartTrim, stripHtml } from "@/functions";
 import Line from "@/Components/Line.vue";
 import MyBg from "@/Components/MyBg.vue";
 
@@ -15,7 +15,7 @@ defineProps({
     <meta
       head-key="description"
       name="description"
-      :content="smartTrim(info.content, 145)"
+      :content="smartTrim(stripHtml(blog.content), 145)"
     />
   </Head>
 
