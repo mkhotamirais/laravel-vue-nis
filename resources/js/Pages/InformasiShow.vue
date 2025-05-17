@@ -15,7 +15,7 @@ defineProps({
     <meta
       head-key="description"
       name="description"
-      :content="smartTrim(stripHtml(blog.content), 145)"
+      :content="smartTrim(stripHtml(info.content), 145)"
     />
   </Head>
 
