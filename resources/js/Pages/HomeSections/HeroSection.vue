@@ -1,5 +1,6 @@
 <script setup>
 import Mybg from "@/Components/Mybg.vue";
+import c from "@/content.json";
 
 defineProps({ heroImages: Object });
 </script>
@@ -22,16 +23,14 @@ defineProps({ heroImages: Object });
               >Nurul Iman Sindangkerta</span
             >
           </h1>
-          <p class="text-xl lg:text-2xl font-medium">
-            "Lembur ilmu, Majelis disiplin, Kancah ibadah dan Wahana perjuangan
-          </p>
+          <p class="text-xl lg:text-2xl font-medium">"{{ c.slogan }}</p>
           <div class="mt-8 flex gap-4">
-            <Link
-              :href="route('ppdb')"
+            <a
+              :href="c.daftar_url_long"
               class="block w-fit py-4 text-lg px-8 rounded-full bg-primary hover:bg-primary-dark transition-all text-white"
             >
               Daftar
-            </Link>
+            </a>
             <a
               href="#agenda"
               class="block w-fit py-4 text-lg px-8 rounded-full border border-primary hover:bg-primary hover:text-white transition-all"

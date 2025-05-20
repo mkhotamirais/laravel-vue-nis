@@ -1,7 +1,6 @@
 <script setup>
 // import Mybg from "@/Components/Mybg.vue";
-import { branchs } from "@/menus";
-
+import c from "@/content.json";
 import TitleSection from "@/Components/TitleSection.vue";
 </script>
 
@@ -29,12 +28,12 @@ import TitleSection from "@/Components/TitleSection.vue";
       </article>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div
-          v-for="(branch, i) in branchs"
+          v-for="(branch, i) in c.logo_profil"
           :key="i"
           class="relative p-4 rounded-lg h-full bg-white shadow-lg border-l-2 border-primary flex flex-col items-center justify-center"
         >
           <img
-            :src="branch.logo"
+            :src="branch.imgLogo"
             :alt="branch.altLogo"
             width="200"
             height="200"

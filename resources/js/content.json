@@ -1,0 +1,136 @@
+{
+    "daftar_url_short":"https://bit.ly/PPDBNI2025",
+    "daftar_url_long":"https://docs.google.com/forms/d/e/1FAIpQLSf8uTlMAxlvO3w49gmxFcTUY6TVIl14nEhitsUs_E8mWtsPCQ/viewform",
+    "address": "Kp. Bangong Rt 02/01, Desa Pasirpogor, Kec. Sindangkerta, Kab. Bandung Barat, Jawa Barat, 40563",
+    "slogan": "Lembur ilmu, Majelis disiplin, Kancah ibadah dan Wahana perjuangan",
+    "main_menu": [
+        {
+            "label": "Pendaftaran", 
+            "url": "/pendaftaran",
+            "sub_menu": [
+                {"label": "Pendaftaran RA", "url": "/pendaftaran-ra"},
+                {"label": "Pendaftaran MTs", "url": "/pendaftaran-mts"},
+                {"label": "Pendaftaran MA", "url": "/pendaftaran-ma"},
+                {"label": "Pendaftaran Ponpes", "url": "/pendaftaran-ponpes"}
+            ]
+        },
+        {"label": "Home", "url": "/"},
+        {
+            "label": "Profil",
+            "url": "#",
+            "sub_menu": [
+                {"label": "Ponpes", "url": "/profil-ponpes"},
+                {"label": "RA", "url": "/profil-ra"},
+                {"label": "MTs", "url": "/profil-mts"},
+                {"label": "MA", "url": "/profil-ma"}
+            ]
+        },
+        {"label": "Informasi", "url": "/informasi"},
+        {"label": "Ekstrakurikuler", "url": "/ekstrakurikuler"},
+        {"label": "Fasilitas", "name": "fasilitas", "url": "/fasilitas"},
+        {"label": "Kontak", "name": "kontak", "url": "/kontak"}
+    ],
+    "user_menu": [
+        {"label": "Profil", "url": "/profile", "icon": "user"},
+        {"label": "Dashboard", "url": "/dashboard", "icon": "gauge"},
+        {"label": "Informasi", "url": "/informasi", "icon": "sitemap"},
+        {"label": "Information Category", "url": "/information-category", "icon": "sitemap"},
+        {"label": "Facility", "url": "/fasilitas", "icon": "images"},
+        {"label": "Facility Category", "url": "/facility-category", "icon": "images"},
+        {"label": "Quotes", "url": "/quote", "icon": "quote-left"},
+        {"label": "Ekstrakurikuler", "url": "/ekstrakurikuler", "icon": "futbol"},
+        {"label": "Agenda & Pengumuman", "url": "/agenda", "icon": "calendar-days"}
+    ],
+    "footer_menu_1": [
+        {"label": "Informasi", "url": "/informasi"},
+        {"label": "Fasilitas", "url": "/fasilitas"},
+        {"label": "Quotes", "url": "/quote"},
+        {"label": "Agenda & Pengumuman", "url": "/agenda"}
+    ],
+    "footer_menu_2": [
+        {"label":"Masuk","url":"/login"},
+        {"label": "Profil RA", "url": "/profile-ra"},
+        {"label": "Profil MTs", "url": "/profile-mts"},
+        {"label": "Profil MA", "url": "https://appmadrasah.kemenag.go.id/web/profile?nsm=131232170036"},
+        {"label": "Profil Ponpes", "url": "/profile-ponpes"}
+    ],
+    "logos": [
+        {"src": "/storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png", "alt": "Logo Yayasan Nurul Iman Sindangkerta"},
+        {"src": "/storage/images/logos/logo-ponpes-nurul-iman-sindangkerta.png", "alt": "Logo Ponpes Nurul Iman Sindangkerta"},
+        {"src": "/storage/images/logos/logo-ma-nurul-iman-sindangkerta.png", "alt": "Logo Ma Nurul Iman Sindangkerta"}
+    ],
+    "logo_profil": [
+        {"title": "RA", "url": "/profil-ra", "imgLogo": "/storage/images/logos/logo-ra-nurul-iman-sindangkerta.png", "altLogo": "Logo ra nurul iman sindangkerta"},
+        {"title": "MTs", "url": "/profil-mts", "imgLogo": "/storage/images/logos/logo-mts-nurul-iman-sindangkerta.png", "altLogo": "Logo mts nurul iman sindangkerta"},
+        {"title": "MA", "url": "/profil-ma", "imgLogo": "/storage/images/logos/logo-ma-nurul-iman-sindangkerta.png", "altLogo": "Logo ma nurul iman sindangkerta"},
+        {"title": "Ponpes", "url": "/profil-ponpes", "imgLogo": "/storage/images/logos/logo-ponpes-nurul-iman-sindangkerta.png", "altLogo": "Logo ponpes nurul iman sindangkerta"}
+    ],
+    "call":{
+        "contact": [
+            {
+                "title": "Ponpes",
+                "contacts": [
+                    {"label": "Ai Habibaturrohmah, M.Pd - 087821828213", "url": "https://wa.me/6287821828213", "icon": "fa-brands fa-whatsapp"},
+                    {"label": "Wifa Ainun Najah - 083829752575", "url": "https://wa.me/6283829752575", "icon": "fa-brands fa-whatsapp"},
+                    {"label": "nurulimanponpes17@gmail.com", "url": "https://mailto:nurulimanponpes17@gmail.com", "icon": "fa-solid fa-envelope"}
+                ]
+            },
+            {
+                "title": "RA",
+                "contacts": [
+                    {"label": "Abdul Mujib S, S.Pd - 085797449436", "url": "https://wa.me/6285797449436", "icon": "fa-brands fa-whatsapp"},
+                    {"label": "Najwa Kamila - 085793867597", "url": "https://wa.me/6285793867597", "icon": "fa-brands fa-whatsapp"}
+                ]
+            },
+            {
+                "title": "MTs",
+                "contacts": [
+                    {"label": "M Saepul Hidayat, S.Pd - 087823121238", "url": "https://wa.me/6287823121238", "icon": "fa-brands fa-whatsapp"},
+                    {"label": "M Suparlan - 082118699451", "url": "https://wa.me/6282118699451", "icon": "fa-brands fa-whatsapp"},
+                    {"label": "mtsnurul.iman36@gmail.com", "url": "https://mailto:mtsnurul.iman36@gmail.com", "icon": "fa-solid fa-envelope"}
+                ]
+            },
+            {
+                "title": "MA",
+                "contacts": [
+                    {"label": "Yanti - 087821395680", "url": "https://wa.me/6287821395680", "icon": "fa-brands fa-whatsapp"},
+                    {"label": "Nurhayat - 081809299580", "url": "https://wa.me/6281809299580", "icon": "fa-brands fa-whatsapp"},
+                    {"label": "nurul.iman36@gmail.com", "url": "https://mailto:nurul.iman36@gmail.com", "icon": "fa-solid fa-envelope"}
+                ]
+            }
+        ],
+        "social": [
+            {
+                "title": "Ponpes",
+                "socials": [
+                    {"label": "pp.nuruliman_sdk", "url": "https://www.instagram.com/pp.nuruliman_sdk/", "icon": "fa-brands fa-instagram"},
+                    {"label": "Ponpes Nurul Iman", "url": "https://www.facebook.com/ponpes.n.iman.9", "icon": "fa-brands fa-facebook"}
+                ]
+            },
+            {
+                "title": "RA",
+                "socials": [
+                    {"label": "Nurul Iman Bangong", "url": "https://www.youtube.com/@nurulimanentertainment8513", "icon": "fa-brands fa-youtube"}
+                ]
+            },
+            {
+                "title": "MTs",
+                "socials": [
+                    {"label": "Nurul Iman Bangong", "url": "https://www.youtube.com/@nurulimanentertainment8513", "icon": "fa-brands fa-youtube"},
+                    {"label": "nuruliman_72", "url": "https://www.instagram.com/nuruliman_72/", "icon": "fa-brands fa-instagram"},
+                    {"label": "NURUL IMAN Sindangkerta", "url": "https://www.facebook.com/nurulimansindangkerta", "icon": "fa-brands fa-facebook"}
+                ]
+            },
+            {
+                "title": "MA",
+                "socials": [
+                    {"label": "Ma Nurul Iman Sindangkerta", "url": "https://www.youtube.com/@manurulimansindangkerta8640", "icon": "fa-brands fa-youtube"},
+                    {"label": "ma_nurul_iman", "url": "https://www.instagram.com/ma_nurul_iman/", "icon": "fa-brands fa-instagram"},
+                    {"label": "osis.ma.nuruliman", "url": "https://www.instagram.com/osis.ma.nuruliman", "icon": "fa-brands fa-instagram"},
+                    {"label": "pramuka.manis", "url": "https://www.instagram.com/pramuka.manis/", "icon": "fa-brands fa-instagram"},
+                    {"label": "Ma Nurul Iman Sindangkerta", "url": "https://www.facebook.com/manurulimansindangkerta/", "icon": "fa-brands fa-facebook"}
+                ]
+            }
+        ]
+    }
+}

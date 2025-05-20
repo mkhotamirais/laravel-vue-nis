@@ -6,55 +6,28 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExtracurricularController;
 use App\Http\Controllers\FacilitycatController;
 use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InfocatController;
 use App\Http\Controllers\InfoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuoteController;
-use App\Http\Controllers\SchoolProfileController;
 use App\Http\Middleware\AdminMiddleware;
-use App\Models\Agenda;
-use App\Models\Facility;
-use App\Models\Info;
-use App\Models\Quote;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Route;
 
-$now = Carbon::now();
-
-Route::inertia('/', 'Home', [
-    'heroImages' => Facility::latest()->take(4)->get(),
-    'infos' => Info::with(['user:id,name', 'infocat:id,name'])
-        ->whereNotNull('banner')
-        ->latest()
-        ->take(4)
-        ->get(),
-    'quotes' => Quote::latest()->take(3)->get(),
-    'facilities' => Facility::latest()->take(4)->get(),
-    'agendas' => Agenda::where(function ($query) use ($now) {
-        $query->where('start_time', '>', $now) // Upcoming
-            ->orWhere(function ($query) use ($now) {
-                $query->where('start_time', '<=', $now)
-                    ->where('end_time', '>=', $now); // Ongoing
-            });
-    })
-        ->orderBy('start_time', 'asc')
-        ->latest()
-        ->take(4)
-        ->get()->map(function ($agenda) {
-            $agenda->agenda_status = $agenda->status;
-            return $agenda;
-        }),
-])->name('home');
+Route::get("/", [HomeController::class, 'index'])->name('home');
 
 // Profiles
-Route::controller(SchoolProfileController::class)->group(function () {
-    Route::get('/profile-ponpes', 'ponpes')->name('profile.ponpes');
-    Route::get('/profile-ra', 'ra')->name('profile.ra');
-    Route::get('/profile-mts', 'mts')->name('profile.mts');
-    Route::get('/profile-ma', 'ma')->name('profile.ma');
-});
+Route::inertia('/profil-ra', 'Profile/ProfileRa')->name('profile.ra');
+Route::inertia('/profil-mts', 'Profile/ProfileMts')->name('profile.mts');
+Route::inertia('/profil-ma', 'Profile/ProfileMa')->name('profile.ma');
+Route::inertia('/profil-ponpes', 'Profile/ProfilePonpes')->name('profile.ponpes');
 
-Route::inertia('/ppdb', 'Ppdb')->name('ppdb');
+// Pendaftaran
+Route::inertia('/pendaftaran-ra', 'Pendaftaran/PendaftaranRa')->name('pendaftaran.ma');
+Route::inertia('/pendaftaran-mts', 'Pendaftaran/PendaftaranMts')->name('pendaftaran.mts');
+Route::inertia('/pendaftaran-ma', 'Pendaftaran/PendaftaranMa')->name('pendaftaran.ma');
+Route::inertia('/pendaftaran-ponpes', 'Pendaftaran/PendaftaranPonpes')->name('pendaftaran.ponpes');
+
 Route::inertia('/kontak', 'Kontak')->name('kontak');
 
 Route::middleware('auth')->group(function () {

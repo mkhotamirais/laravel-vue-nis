@@ -2,7 +2,7 @@
 import Logo from "@/Components/Logo.vue";
 import Line from "@/Components/Line.vue";
 
-import { mainMenus } from "../menus";
+import c from "@/content.json";
 import { ref } from "vue";
 
 defineProps({
@@ -49,32 +49,36 @@ const openSubMenu = (index) => {
           </div>
           <Line color="border-white" class="py-4" />
           <nav class="flex flex-col gap-1">
-            <div v-for="(menu, i) in mainMenus" :key="i" class="relative group">
+            <div
+              v-for="(menu, i) in c.main_menu"
+              :key="i"
+              class="relative group"
+            >
               <div
                 @click="openSubMenu(i)"
                 class="btn flex items-center justify-between w-full"
               >
                 <Link @click="closeBothNav" :href="menu.url" class="w-full">
-                  {{ menu.title }}
+                  {{ menu.label }}
                 </Link>
                 <span
-                  v-show="menu.subMenus"
+                  v-show="menu.sub_menu"
                   class="group-hover:rotate-180 transition-all text-xs"
                 >
                   <i class="fa-solid fa-chevron-down"></i>
                 </span>
               </div>
               <div
-                v-if="menu.subMenus && showSubMenu === i"
+                v-if="menu.sub_menu && showSubMenu === i"
                 class="pl-4 flex flex-col"
               >
                 <Link
                   @click="closeBothNav"
-                  v-for="(m, j) in menu.subMenus"
+                  v-for="(m, j) in menu.sub_menu"
                   :key="j"
                   :href="m.url"
                   class="btn"
-                  >{{ m.title }}</Link
+                  >{{ m.label }}</Link
                 >
               </div>
             </div>

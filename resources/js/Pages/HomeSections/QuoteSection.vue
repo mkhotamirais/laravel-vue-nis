@@ -27,7 +27,7 @@ defineProps({
             <p
               class="mt-6 text-lg !text-white font-semibold uppercase tracking-wider"
             >
-              - <span class="!text-secondary">{{ q.author }}</span>
+              - <span class="!text-gray-200">{{ q.author }}</span>
             </p>
           </article>
         </swiper-slide>

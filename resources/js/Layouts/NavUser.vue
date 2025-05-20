@@ -1,5 +1,5 @@
 <script setup>
-import { userMenus } from "../menus";
+import c from "@/content.json";
 
 defineProps({
   user: Object,
@@ -58,14 +58,14 @@ defineProps({
               </Link>
             </div>
             <Link
-              v-for="(menu, i) in userMenus"
+              v-for="(menu, i) in c.user_menu"
               :href="menu.url"
               :key="i"
               class="btn block w-full text-left"
               @click="closeBothNav"
             >
               <i :class="`fa-solid fa-${menu.icon} mr-2`"></i>
-              {{ menu.title }}
+              {{ menu.label }}
             </Link>
             <Link
               @click="closeBothNav"

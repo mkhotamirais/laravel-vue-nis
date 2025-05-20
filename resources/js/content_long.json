@@ -1,0 +1,201 @@
+{
+    "_comment": "Jangan Hapus Periode Pendaftaran Tiap Tahun, dengan memberi _ di awal",
+    "ppdb_ponpes": {
+        "title": "PSB Ponpes",
+        "description": "Penerimaan Santri Baru Pondok Pesantren Nurul Iman Sindangkerta",
+        "content": [
+            {"title": "Periode Pendaftaran","description": "Februari 2025 s.d. Juni 2025, setiap hari kerja pukul 08.00 s.d. 15.00 WIB"}
+        ],
+        "images": [{"src": "/storage/images/ppdb-mts-2025-1.jpg", "alt": "banner 1 ppdb mts 2025"}]
+    },
+    "ppdb_ra": {
+        "title": "PPDB RA",
+        "description": "Penerimaan Peserta Didik Baru Raudhatul Atfal Nurul Iman Sindangkerta",
+        "content": [
+            {"title": "Periode Pendaftaran","description": "Februari 2025 s.d. Juni 2025, setiap hari kerja pukul 08.00 s.d. 15.00 WIB"}
+        ],
+        "images": [{"src": "/storage/images/ppdb-mts-2025-1.jpg", "alt": "banner 1 ppdb mts 2025"}]
+    },
+    "ppdb_mts": {
+        "title": "SPMB MTs",
+        "description": "Sistem Penerimaan Murid Baru Madrasah Tsanawiyah Nurul Iman Sindangkerta",
+        "content": [
+            {
+                "title": "Periode Pendaftaran",
+                "description": "Februari 2025 s.d. Juni 2025, setiap hari kerja pukul 08.00 s.d. 15.00 WIB"
+            },
+            {
+                "title": "Persyaratan Pendaftaran",
+                "description": "Mengisi formulir pendaftaran yang disediakan oleh panitia",
+                "list": [
+                    "Copy Ijazah (legalisir) 2 Lembar",
+                    "Copy SHUN 2 Lembar.",
+                    "Copy Karku Keluarga (KK) 2 Lembar.",
+                    "Copy KTP Orang Tua (Ayah dan Ibu) 2 Lembar (jika ada).",
+                    "Copy Akte Kelahiran 2 Lembar.",
+                    "Semua Berkas pendaftaran dimasukan ke dalam <b class='text-blue-500'>Map Biru</b>, Rangkap 2 Bagi calon santri"
+                ]
+            }
+        ],
+        "images": [
+            {"src": "/storage/images/ppdb-mts-2025-1.jpg", "alt": "banner 1 ppdb mts 2025"},
+            {"src": "/storage/images/ppdb-mts-2025-2.jpg", "alt": "banner 2 ppdb mts 2025"}
+        ]
+    },
+    "ppdb_ma": {
+        "title": "PPDB MA",
+        "description": "Penerimaan Peserta Didik Baru Madrasah Aliyah Nurul Iman Sindangkerta",
+        "content": [
+            {
+                "title": "Periode Pendaftaran",
+                "description": "10 Februari 2025 s.d. 10 Juli 2025, setiap hari kerja pukul 08.00 s.d. 15.00 WIB"
+            },
+            {
+                "title": "Persyaratan Pendaftaran",
+                "description": "Mengisi formulir pendaftaran yang disediakan oleh panitia",
+                "list": [
+                    "Copy Surat Ket. Lulus 1 Lembar.",
+                    "Copy KTP/KK Orang Tua 2 Lembar.",
+                    "Copy Ijazah/STTB SMP/MTs 1 Lembar.",
+                    "Copy Kartu KIP/PKH 1 Lembar (jika ada).",
+                    "Semua Berkas pendaftaran dimasukan ke dalam <b class='text-green-500'>Map Hijau</b>, Rangkap 2 Bagi calon santri"
+                ]
+            },
+            {
+                "title": "Fasilitas",
+                "description": "Fasilitas pendaftaran",
+                "list": [
+                    "Sarana gedung 3 lantai representatif & memadai.",
+                    "Berada di lokasi Pondok Pesantren dan berasrama.",
+                    "Memiliki kegiatan unggulan bidang akademik dan non akademik.",
+                    "SDM tenaga pendidik profesional di bidangnya mulai S1 - S2."
+                ]
+            }
+        ],
+        "images": [
+            {"src": "/storage/images/ppdb-ma-2025.jpg", "alt": "banner 1 ppdb ma 2025"}
+        ]
+    },
+    "profil_ponpes": {
+        "title": "Profil Ponpes",
+        "description": "Profil Pondok Pesantren Nurul Iman Sindangkerta",
+        "sambutan": {
+            "title": "Sambutan Pinpinan Ponpes Pesantren Nurul Iman",
+            "head_master": {"name": "KH. Jaeni Marjuki, M.Ag","src": "/storage/images/kepala-ponpes-nurul-iman-2.jpg","alt": "Kepala Ponpes Nurul Iman Sindangkerta"},
+            "paragraph": [
+                "Segala puji bagi Allah SWT, Tuhan semesta alam, yang telah melimpahkan rahmat dan hidayah-Nya kepada kita semua. Shalawat serta salam semoga selalu tercurah kepada junjungan kita, Nabi Muhammad SAW, beserta keluarga, sahabat, dan para pengikutnya hingga akhir zaman."
+            ]
+        },
+        "visi_misi": {
+            "title": "Visi dan Misi",
+            "visi": "Membangun umat yang memiliki kesalehan sosial yang bermanfaat serta bermakna untuk akhirat",
+            "misi": [
+                "Menanamkan nilai-nilai ketauhidan dan setia terhadap Akhlaqul Karimah sebagaimana diajarkan oleh Rasulullah SAW.",
+                "Mengembangkan kemampuan santri dalam penguasaan program pesantren untuk membentuk santri yang cerdas secara spiritual, emosional, dan intelektual.",
+                "Meningkatkan kesadaran bahwa ilmu dan amal ibarat ruh dan jasad yang merupakan satu kesatuan yang tak bisa dipisahkan.",
+                "Membentuk kepribadian dan akhlak mulia dari santri.",
+                "Menjadikan peserta didik sebagai kader santri agar siap menghadapi era global, tangguh dan berdaya saing serta menjadi penerus kader ulama.",
+                "Memberikan pelayanan pendidikan yang menyeluruh untuk masyarakat.",
+                "Melahirkan kader-kader yang berperan aktif dalam pembangunan sosial kemasyarakatan, pendidikan dan dakwah."
+            ]
+        },
+        "sejarah": [
+            "Sudah menjadi komitmen sejak berdiri pada tahun 1989 sampai dengan sekarang. Pada dunia pendidikan baik formal maupun informal dengan membawa visi dan misi yang menunjung tinggi nilai agama, budaya dan bangsa dengan tujuan membangun generasi yang berakhlakul karimah, berjiwa mandiri, mampu bersaing dan bermanfaat untuk umat.",
+            "Salah satu yang menunjang tercapainya visi dan misi, Nurul Iman menyediakan sarana prasarana yang kompeten dibidangnya, dilengkapi dengan fasilitas serta tenaga pengajar yang memadai untuk ibadah, ruang belajar dan asrama bagi siswa dan santri yang mondok. Perpaduan kurikulum pesantren sehingga para pelajar dan santri mendapatkan ilmu yang seimbang antara ilmu agama dan ilmu umum, disamping itu dibekali dengan berbagai macam keterampilan melalui kegiatan ekstrakurikuler."
+        ]
+    },
+    "profil_ra": {
+        "title": "Profil RA",
+        "description": "Profil Raudhatul Athfal Nurul Iman Sindangkerta",
+        "sambutan": {
+            "title": "Sambutan Kepala RA Nurul Iman",
+            "head_master": {"name": "Abdul Mujib S, S.Pd","src": "","alt": "Kepala RA Nurul Iman Sindangkerta"},
+            "paragraph": [
+                "Segala puji bagi Allah SWT, Tuhan semesta alam, yang telah melimpahkan rahmat dan hidayah-Nya kepada kita semua. Shalawat serta salam semoga selalu tercurah kepada junjungan kita, Nabi Muhammad SAW, beserta keluarga, sahabat, dan para pengikutnya hingga akhir zaman."
+            ]
+        },
+        "visi_misi": {
+            "title": "Visi dan Misi",
+            "visi": "Mewujudkan Peserta Didik yang Handal, Empati, Berakhlak, dan Terampil (HEBAT).",
+            "misi": [
+                "Menanamkan Pendidikan Agama Islam Sejak Dini.",
+                "Membiasakan Membaca dan Memahami Al-Qur’an.",
+                "Melatih Disiplin dan Perilaku Islami.",
+                "Melatih dan Membiasakan Ibadah."
+            ]
+        },
+        "sejarah": [
+            "Sudah menjadi komitmen sejak berdiri pada tahun 1989 sampai dengan sekarang. Pada dunia pendidikan baik formal maupun informal dengan membawa visi dan misi yang menunjung tinggi nilai agama, budaya dan bangsa dengan tujuan membangun generasi yang berakhlakul karimah, berjiwa mandiri, mampu bersaing dan bermanfaat untuk umat.",
+            "Salah satu yang menunjang tercapainya visi dan misi, Nurul Iman menyediakan sarana prasarana yang kompeten dibidangnya, dilengkapi dengan fasilitas serta tenaga pengajar yang memadai untuk ibadah, ruang belajar dan asrama bagi siswa dan santri yang mondok. Perpaduan kurikulum pesantren sehingga para pelajar dan santri mendapatkan ilmu yang seimbang antara ilmu agama dan ilmu umum, disamping itu dibekali dengan berbagai macam keterampilan melalui kegiatan ekstrakurikuler."
+        ]
+    },
+    "profil_mts": {
+        "title": "Profil MTs",
+        "description": "Profil Madrasah Tsanawiyah Nurul Iman Sindangkerta",
+        "sambutan": {
+            "title": "Sambutan Kepala MTs Nurul Iman",
+            "head_master": {"name": "M Ridwan Mu'min, S.Ag","src": "","alt": "Kepala MTs Nurul Iman Sindangkerta"},
+            "paragraph": [
+                "Segala puji bagi Allah SWT, Tuhan semesta alam, yang telah melimpahkan rahmat dan hidayah-Nya kepada kita semua. Shalawat serta salam semoga selalu tercurah kepada junjungan kita, Nabi Muhammad SAW, beserta keluarga, sahabat, dan para pengikutnya hingga akhir zaman."
+            ]
+        },
+        "visi_misi": {
+            "title": "Visi dan Misi",
+            "visi": "Mewujudkan Pribadi Muslim Yang Berkualitas, Agamis, Resik, Aktur Tur Nyaman (BARAYA).",
+            "misi": [
+                "Menciptakan Madrasah yang mampu mengikuti arah perkembangan zaman.",
+                "Melaksanakan pembelajaran dengan pola school based religion.",
+                "Meningkatkan potensi seluruh komponen Madrasah.",
+                "Meningkatkan kompetensi siswa melalui pengembangan diri dan life skill.",
+                "Menjadikan lingkungan Madrasah yang nyaman, bersih, sehat dan indah."
+            ]
+        },
+        "sejarah": [
+            "Sudah menjadi komitmen sejak berdiri pada tahun 1989 sampai dengan sekarang. Pada dunia pendidikan baik formal maupun informal dengan membawa visi dan misi yang menunjung tinggi nilai agama, budaya dan bangsa dengan tujuan membangun generasi yang berakhlakul karimah, berjiwa mandiri, mampu bersaing dan bermanfaat untuk umat.",
+            "Salah satu yang menunjang tercapainya visi dan misi, Nurul Iman menyediakan sarana prasarana yang kompeten dibidangnya, dilengkapi dengan fasilitas serta tenaga pengajar yang memadai untuk ibadah, ruang belajar dan asrama bagi siswa dan santri yang mondok. Perpaduan kurikulum pesantren sehingga para pelajar dan santri mendapatkan ilmu yang seimbang antara ilmu agama dan ilmu umum, disamping itu dibekali dengan berbagai macam keterampilan melalui kegiatan ekstrakurikuler."
+        ]
+    },
+    "profil_ma": {
+        "title": "Profil MA",
+        "description": "Profil Madrasah Aliyah Nurul Iman Sindangkerta",
+        "sambutan": {
+            "title": "Sambutan Kepala MA Nurul Iman",
+            "head_master": {"name": "KH. Jaeni Marjuki, M.Ag","src": "/storage/images/kepala-ma-nurul-iman-1.jpg","alt": "Kepala MA Nurul Iman Sindangkerta"},
+            "paragraph": [
+                "Segala puji bagi Allah SWT, Tuhan semesta alam, yang telah melimpahkan rahmat dan hidayah-Nya kepada kita semua. Shalawat serta salam semoga selalu tercurah kepada junjungan kita, Nabi Muhammad SAW, beserta keluarga, sahabat, dan para pengikutnya hingga akhir zaman.",
+                "Dengan penuh rasa syukur, saya menyambut seluruh keluarga besar MA Nurul Iman Sindangkerta di situs resmi ini. Website ini hadir sebagai jendela informasi dan komunikasi bagi para siswa, orang tua, tenaga pendidik, serta masyarakat luas dalam mengenal lebih dekat madrasah kami.",
+                "Sebagai lembaga pendidikan Islam, MA Nurul Iman berkomitmen untuk mencetak generasi yang tidak hanya unggul dalam akademik, tetapi juga memiliki kepribadian Islami, akhlakul karimah, serta jiwa kepemimpinan yang kuat. Melalui pendekatan berbasis keimanan, ilmu, dan amal, kami berupaya menghadirkan lingkungan pembelajaran yang kondusif dan inspiratif, di mana siswa dapat berkembang secara optimal dalam bidang ilmu pengetahuan dan spiritual.",
+                "Di era digital yang terus berkembang, kami berusaha untuk selalu adaptif dan inovatif dalam menyajikan pembelajaran yang relevan dengan kebutuhan zaman, tanpa melupakan nilai-nilai agama sebagai pondasi utama. Oleh karena itu, kami terus mengembangkan kurikulum berbasis teknologi, meningkatkan kualitas tenaga pendidik, serta memperkuat program-program keislaman yang menjadi ciri khas madrasah ini.",
+                "Kami juga mengajak seluruh pihak, baik orang tua, alumni, maupun masyarakat, untuk bersinergi dalam mendukung visi dan misi madrasah. Kebersamaan kita adalah kunci keberhasilan dalam membentuk generasi yang cerdas, berakhlak, dan siap menghadapi tantangan masa depan dengan penuh keimanan dan ketakwaan.",
+                "Akhir kata, saya mengucapkan terima kasih atas kepercayaan dan dukungan yang diberikan kepada MA Nurul Iman Sindangkerta. Semoga Allah SWT senantiasa meridai langkah kita dalam mencerdaskan kehidupan bangsa melalui pendidikan yang berlandaskan nilai-nilai Islam."
+            ]
+        },
+        "visi_misi": {
+            "title": "Visi, Misi dan Tujuan",
+            "visi": "Terbentuknya Madrasah Yang Religius, Unggul, Mandiri dan Berwawasan Global",
+            "misi": [
+                "Menciptakan suasana madrasah yang bernuansa Islami.",
+                "Menyelenggarakan pengajaran agama Islam yang komprehensif, mendalam, serta membangun kesadaran spiritual dan akhlak mulia dalam diri peserta didik.",
+                "Menciptakan program unggulan akademik dan non-akademik.",
+                "Menyelenggarakan dan mendorong kegiatan pengembangan diri untuk meningkatkan keterampilan dan kemandirian.",
+                "Meningkatkan literasi dan mengintegrasikan teknologi informasi, komunikasi dalam proses pembelajaran."
+            ],
+            "tujuan":[
+                "Terbenntuknya Generasi yang Religius dan Berkarakter.",
+                "Mampu bersaing dibidang akademik dan non akademik.",
+                "Menghasilkan lulusan yang memiliki life skill relevan dengan perkembangan zaman.",
+                "Terbentuknya budaya literasi, kreatif, berpikir"
+            ]
+        },
+        "sejarah": [
+            "Madrasah Aliyah Nurul Iman Sindangkerta merupakan lembaga pendidikan Islam setingkat SLTA yang berdiri pada tahun 2001 atas inisiatif tokoh masyarakat, khususnya Drs. H. Darojat Marjuki, M.A. Pendirian madrasah ini didorong oleh kebutuhan akan lembaga pendidikan berbasis Islam di Desa Pasirpogor, Kecamatan Sindangkerta. Setelah melalui proses panjang, izin operasional resmi dikeluarkan pada 29 Oktober 2002 oleh Kepala Bidang Pembinaan Perguruan Agama Islam dengan Nomor Statistik Madrasah: 131232170036.",
+            "Sejak berdiri, MA Nurul Iman mengalami perkembangan pesat dalam hal akreditasi. Awalnya terakreditasi dengan predikat C pada tahun 2006, kemudian meningkat menjadi B pada 2014, dan akhirnya memperoleh predikat A pada 2019. Sebagai madrasah swasta yang bernaung di bawah lingkungan Pondok Pesantren, MA Nurul Iman berkomitmen mencetak generasi muda yang unggul dalam ilmu pengetahuan, spiritual, dan emosional. Dukungan Kementerian Agama turut berperan dalam meningkatkan kualitas pendidikan dan sarana madrasah.",
+            "Dalam upaya meningkatkan kualitas pendidikan, MA Nurul Iman menerapkan kebijakan yang menegaskan kesetaraan madrasah dengan sekolah umum, menanamkan nilai-nilai Islam yang moderat, serta mempersiapkan peserta didik menghadapi era globalisasi dan perkembangan teknologi. Madrasah ini mengadaptasi kurikulum nasional yang dipadukan dengan kurikulum pesantren, memungkinkan peserta didik mendapatkan pendidikan formal sekaligus pemahaman diniyah.",
+            "Selain itu, MA Nurul Iman juga terus berupaya menyesuaikan program pendidikannya dengan perkembangan zaman, termasuk dalam aspek ilmu pengetahuan, teknologi, globalisasi, dan perubahan sosial. Dengan perpaduan sistem pendidikan yang kuat dan dukungan sarana yang memadai, madrasah ini diharapkan mampu mencetak lulusan yang cerdas, berakhlak mulia, dan siap menghadapi tantangan masa depan.",
+            "Ke depan, MA Nurul Iman berencana untuk memperluas jangkauan pendidikannya dengan meningkatkan kualitas tenaga pengajar dan fasilitas pembelajaran. Selain itu, madrasah juga akan terus berinovasi dalam metode pengajaran agar tetap relevan dengan perkembangan zaman, sehingga dapat terus memberikan kontribusi positif bagi masyarakat, khususnya di Kabupaten Bandung Barat.",
+            "Dengan semakin meningkatnya eksistensi madrasah dalam sistem pendidikan nasional, MA Nurul Iman memiliki peran strategis dalam membentuk generasi muda yang tidak hanya cerdas secara akademik tetapi juga memiliki wawasan keislaman yang kuat. Hal ini diharapkan dapat memperkuat peran madrasah sebagai bagian integral dari pendidikan nasional dan mencetak lulusan yang siap berkontribusi bagi bangsa dan agama."
+        ]
+    }
+}
+
+

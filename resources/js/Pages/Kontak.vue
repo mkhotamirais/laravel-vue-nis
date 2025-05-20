@@ -1,7 +1,7 @@
 <script setup>
 import SectionHero from "@/Components/SectionHero.vue";
 import MyBg from "@/Components/MyBg.vue";
-import { contactMenus, socialsMenus } from "../menus";
+import c from "@/content.json";
 </script>
 
 <template>
@@ -25,24 +25,25 @@ import { contactMenus, socialsMenus } from "../menus";
       <article class="space-y-6">
         <div class="space-y-3">
           <h2 class="h2">Alamat</h2>
-          <p>
-            Kp. Bangong Rt 02/01, Desa Pasirpogor, Kec. Sindangkerta, Kab.
-            Bandung Barat, Jawa Barat, 40563
-          </p>
+          <address>
+            <p>
+              {{ c.address }}
+            </p>
+          </address>
         </div>
         <div class="space-y-3">
           <h2 class="h2">Kontak</h2>
-          <div v-for="(item, i) in contactMenus" :key="i">
+          <div v-for="(item, i) in c.call.contact" :key="i">
             <h3 class="h3 mb-2">{{ item.title }}</h3>
-            <div v-if="item.subMenus.length">
+            <div v-if="item.contacts.length">
               <a
-                v-for="(itm, j) in item.subMenus"
+                v-for="(itm, j) in item.contacts"
                 :key="j"
                 :href="itm.url"
                 class="link w-fit pb-2 flex items-center gap-2"
               >
                 <i :class="`${itm.icon}`"></i>
-                {{ itm.title }}</a
+                {{ itm.label }}</a
               >
             </div>
             <div v-else>-</div>
@@ -50,17 +51,17 @@ import { contactMenus, socialsMenus } from "../menus";
         </div>
         <div class="space-y-3">
           <h2 class="h2">Sosial Media</h2>
-          <div v-for="(item, i) in socialsMenus" :key="i">
+          <div v-for="(item, i) in c.call.social" :key="i">
             <h3 class="h3 mb-2">{{ item.title }}</h3>
-            <div v-if="item.subMenus.length">
+            <div v-if="item.socials.length">
               <a
-                v-for="(itm, j) in item.subMenus"
+                v-for="(itm, j) in item.socials"
                 :key="j"
                 :href="itm.url"
                 class="link w-fit pb-2 flex items-center gap-2"
               >
                 <i :class="`${itm.icon}`"></i>
-                {{ itm.title }}</a
+                {{ itm.label }}</a
               >
             </div>
             <div v-else>-</div>

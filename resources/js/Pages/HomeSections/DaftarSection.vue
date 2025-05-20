@@ -1,4 +1,5 @@
 <script setup>
+import c from "@/content.json";
 </script>
 
 <template>
@@ -9,10 +10,10 @@
       >
         Nurul Iman tempat orang baik dan orang-orang yang ingin menjadi baik
       </h2>
-      <Link
-        :href="route('ppdb')"
+      <a
+        :href="c.daftar_url_long"
         class="py-4 px-8 text-lg bg-white hover:bg-white/90 text-primary block w-fit rounded-full"
-        >Daftar Sekarang</Link
+        >Daftar Sekarang</a
       >
     </div>
   </section>
