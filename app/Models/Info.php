@@ -27,6 +27,11 @@ class Info extends Model
         return $this->belongsTo(Infocat::class);
     }
 
+    public function infoimages()
+    {
+        return $this->hasMany(Infoimage::class);
+    }
+
     public function scopeFilter($query, array $filters)
     {
         if ($filters['search'] ?? false) {

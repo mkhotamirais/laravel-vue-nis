@@ -37,12 +37,7 @@ const submit = () => {
   form.post(
     route("fasilitas.update", {
       facility: props.facility,
-    }),
-    {
-      onSuccess: () => {
-        form.reset();
-      },
-    }
+    })
   );
 };
 </script>

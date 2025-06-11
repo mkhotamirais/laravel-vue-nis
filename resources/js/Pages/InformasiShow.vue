@@ -6,6 +6,7 @@ import MyBg from "@/Components/MyBg.vue";
 defineProps({
   info: Object,
   latestInfos: Object,
+  infoImages: Object,
 });
 </script>
 
@@ -29,7 +30,7 @@ defineProps({
             <p class="!text-gray-500">{{ diffForHumans(info.created_at) }}</p>
           </div>
 
-          <img
+          <!-- <img
             :src="
               info.banner
                 ? `/storage/${info.banner}`
@@ -40,7 +41,27 @@ defineProps({
             width="500"
             height="300"
             loading="lazy"
-          />
+          /> -->
+          <div
+            class="h-64 sm:h-80 lg:h-110 flex w-full mx-auto rounded-lg overflow-x-scroll"
+          >
+            <template v-for="(h, i) in infoImages" :key="i">
+              <a
+                :href="`/storage/${h}`"
+                class="min-w-full h-full inline-block"
+                aria-label="Popular Destinations"
+              >
+                <img
+                  :src="`/storage/${h}`"
+                  :alt="smartTrim(info.title, 100) + ' ' + i"
+                  width="500"
+                  height="500"
+                  class="w-full h-full object-cover object-center"
+                  loading="lazy"
+                />
+              </a>
+            </template>
+          </div>
           <p class="text-content" v-html="info.content"></p>
         </article>
         <div class="min-w-full md:min-w-80 sticky top-24">

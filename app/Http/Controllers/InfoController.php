@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Info;
 use App\Models\Infocat;
+use App\Models\Infoimage;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -50,7 +51,11 @@ class InfoController extends Controller
             ->take(6)
             ->get();
 
-        return inertia('InformasiShow', compact('info', 'latestInfos'));
+        $additionalImages = $info->infoimages()->pluck('image')->toArray();
+
+        $infoImages = array_filter(array_merge([$info->banner], $additionalImages));
+
+        return inertia('InformasiShow', compact('info', 'latestInfos', 'infoImages'));
     }
 
     public function create()
@@ -61,6 +66,7 @@ class InfoController extends Controller
 
     public function edit(Info $info)
     {
+        $info = $info->load('infoimages');
         $infocats = Infocat::with('user:id,name,role')->orderBy('name')->get();
         return inertia('Dashboard/Info/Edit', compact('info', 'infocats'));
     }
@@ -73,6 +79,7 @@ class InfoController extends Controller
             'content' => 'required|string',
             'tags' => 'nullable|string',
             'banner' => 'nullable|file|max:2048|mimes:jpg,jpeg,png,webp',
+            'images.*' => 'file|max:2048|mimes:jpg,jpeg,png,webp'
         ]);
 
         if ($request->hasFile('banner')) {
@@ -82,17 +89,33 @@ class InfoController extends Controller
         $fields['tags'] = implode(',', array_unique(array_filter(array_map('trim', explode(',', $request->tags)))));
         $fields['slug'] = Str::slug($request->title);
 
-        $request->user()->infos()->create($fields);
+        $info = $request->user()->infos()->create($fields);
+
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('images/information', 'public');
+                $info->infoimages()->create(['image' => $path]);
+            }
+        }
 
         return redirect()->route('informasi')->with('success', "Information '$request->title' berhasil dibuat");
     }
 
     public function destroy(Info $info)
     {
+        foreach ($info->infoimages as $image) {
+            $filePath = $image->image;
+            if (Storage::disk('public')->exists($filePath)) {
+                Storage::disk('public')->delete($filePath);
+            }
+            $image->delete();
+        }
         if ($info->banner) {
             Storage::disk('public')->delete($info->banner);
         }
+
         $info->delete();
+
         return back()->with('success', "'$info->title' berhasil dihapus");
     }
 
@@ -104,6 +127,9 @@ class InfoController extends Controller
             'content' => 'required|string',
             'tags' => 'nullable|string',
             'banner' => 'nullable|file|max:2084|mimes:jpg,jpeg,png,webp',
+            'delete_images' => 'nullable|array',
+            'delete_images.*' => 'exists:infoimages,id',
+            'images.*' => 'file|max:1084|mimes:jpg,jpeg,png,webp'
         ]);
 
         if ($request->hasFile('banner')) {
@@ -119,6 +145,26 @@ class InfoController extends Controller
         $fields['slug'] = Str::slug($request->title);
 
         $info->update($fields);
+
+        // Hapus gambar yang dipilih
+        if ($request->has('delete_images')) {
+            $imagesToDelete = Infoimage::whereIn('id', $request->delete_images)->get();
+            foreach ($imagesToDelete as $image) {
+                // Hapus file fisik
+                if (Storage::disk('public')->exists($image->image)) {
+                    Storage::disk('public')->delete($image->image);
+                }
+                $image->delete();
+            }
+        }
+
+        // Simpan gambar-gambar ke storage dan database
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('images/information', 'public');
+                $info->infoimages()->create(['image' => $path]);
+            }
+        }
 
         return redirect()->route('informasi')->with('success', "Information '$request->title' berhasil diupdate");
     }

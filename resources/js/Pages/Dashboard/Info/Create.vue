@@ -4,6 +4,7 @@ import Textarea from "@/Components/Textarea.vue";
 import TextareaCke from "@/Components/TextareaCke.vue";
 import Select from "@/Components/Select.vue";
 import ImageUpload from "@/Components/ImageUpload.vue";
+import ImagesUpload from "@/Components/ImagesUpload.vue";
 import { useForm, usePage } from "@inertiajs/vue3";
 import { computed } from "vue";
 
@@ -15,12 +16,20 @@ const form = useForm({
   content: "",
   tags: null,
   banner: null,
+  images: [],
 });
 
 const page = usePage();
 const user = computed(() => page.props.auth.user);
 
 const banner = (e) => (form.banner = e);
+const images = (e) => (form.images = e);
+
+const imagesErrors = computed(() => {
+  return Object.entries(form.errors)
+    .filter(([key]) => key.startsWith("images."))
+    .map(([, message]) => message);
+});
 
 const submit = () => {
   form.post(route("informasi.store"), {
@@ -39,7 +48,7 @@ const submit = () => {
       sekolah
     </p>
     <form @submit.prevent="submit" class="py-4 max-w-lg">
-      <ImageUpload @image="(e) => banner(e)" />
+      <ImageUpload @image="(e) => banner(e)" :error="form.errors.banner" />
       <Input
         label="Title"
         id="title"
@@ -87,6 +96,8 @@ const submit = () => {
         v-model="form.content"
         :error="form.errors.content"
       />
+      <ImagesUpload @images="(files) => images(files)" :error="imagesErrors" />
+
       <div class="flex gap-2">
         <button type="submit" class="btn" :disabled="form.processing">
           Tambah

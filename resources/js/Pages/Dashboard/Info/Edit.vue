@@ -4,6 +4,7 @@ import Textarea from "@/Components/Textarea.vue";
 import TextareaCke from "@/Components/TextareaCke.vue";
 import Select from "@/Components/Select.vue";
 import ImageUpload from "@/Components/ImageUpload.vue";
+import ImagesUpload from "@/Components/ImagesUpload.vue";
 import { useForm, usePage } from "@inertiajs/vue3";
 import { computed } from "vue";
 
@@ -15,12 +16,22 @@ const form = useForm({
   content: props.info.content,
   tags: props.info.tags,
   banner: null,
+  images: [],
+  delete_images: [],
   _method: "PATCH",
 });
 
 const page = usePage();
 const user = computed(() => page.props.auth.user);
+
 const banner = (e) => (form.banner = e);
+const images = (e) => (form.images = e);
+
+const imagesErrors = computed(() => {
+  return Object.entries(form.errors)
+    .filter(([key]) => key.startsWith("images."))
+    .map(([, message]) => message);
+});
 
 const submit = () => {
   form.post(
@@ -39,7 +50,11 @@ const submit = () => {
       sekolah
     </p>
     <form @submit.prevent="submit" class="py-4 max-w-lg">
-      <ImageUpload @image="(e) => banner(e)" :oldBanner="info.banner" />
+      <ImageUpload
+        @image="(e) => banner(e)"
+        :oldBanner="info.banner"
+        :error="form.errors.banner"
+      />
       <Input
         label="Title"
         id="title"
@@ -86,6 +101,32 @@ const submit = () => {
         v-model="form.content"
         :error="form.errors.content"
       />
+
+      <!-- current images -->
+      <div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-2">
+          <div
+            v-for="(ii, i) in info.infoimages"
+            :key="i"
+            class="relative group"
+          >
+            <label>
+              <img
+                :src="`/storage/${ii.image}`"
+                class="w-full h-32 object-cover object-center rounded-lg"
+              />
+              <input
+                type="checkbox"
+                v-model="form.delete_images"
+                :value="ii.id"
+              />
+              Delete
+            </label>
+          </div>
+        </div>
+      </div>
+      <ImagesUpload @images="(files) => images(files)" :error="imagesErrors" />
+
       <div class="flex gap-2">
         <button type="submit" class="btn" :disabled="form.processing">
           Simpan
