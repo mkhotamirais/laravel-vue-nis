@@ -23,7 +23,7 @@ class QuoteController extends Controller
             'author' => 'required',
         ]);
 
-        Auth::user()->quotes()->create($fields);
+        $request->user()->quotes()->create($fields);
 
         return back()->with('success', "Quote berhasil dibuat");
     }

@@ -39,7 +39,7 @@ class ExtracurricularController extends Controller
             $fields['banner'] = Storage::disk('public')->put('images/information', $request->banner);
         }
 
-        Auth::user()->extracurriculars()->create($fields);
+        $request->user()->extracurriculars()->create($fields);
 
         return redirect()->route('ekstrakurikuler')->with('success', "Ekstrakurikuler '$request->title' berhasil dibuat");
     }

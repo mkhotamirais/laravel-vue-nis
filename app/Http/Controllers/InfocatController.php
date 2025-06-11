@@ -31,7 +31,7 @@ class InfocatController extends Controller
 
         $slug = Str::slug($request->name);
 
-        Auth::user()->infocats()->create([...$fields, 'slug' => $slug]);
+        $request->user()->infocats()->create([...$fields, 'slug' => $slug]);
 
         return back()->with('success', "Information Category '$request->name' berhasil dibuat");
     }

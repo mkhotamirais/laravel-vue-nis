@@ -48,7 +48,7 @@ class FacilityController extends Controller
 
         $fields['slug'] = Str::slug($request->name);
 
-        $facility = Auth::user()->facilities()->create($fields);
+        $facility = $request->user()->facilities()->create($fields);
 
         // Simpan gambar-gambar ke storage dan database
         if ($request->hasFile('images')) {

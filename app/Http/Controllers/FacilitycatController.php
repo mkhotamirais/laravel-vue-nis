@@ -31,7 +31,7 @@ class FacilitycatController extends Controller
 
         $slug = Str::slug($request->name);
 
-        Auth::user()->facilitycats()->create([...$fields, 'slug' => $slug]);
+        $request->user()->facilitycats()->create([...$fields, 'slug' => $slug]);
 
         return back()->with('success', "Facility Category '$request->name' berhasil dibuat");
     }

@@ -17,7 +17,7 @@ class InfoController extends Controller
         $infos = Info::with(['user:id,name', 'infocat:id,name'])
             ->filter(request(['search', 'category', 'tag']))
             ->latest()
-            ->paginate(4)
+            ->paginate(8)
             ->withQueryString();
 
         $infocats = Infocat::orderBy('name')->get();
@@ -82,7 +82,7 @@ class InfoController extends Controller
         $fields['tags'] = implode(',', array_unique(array_filter(array_map('trim', explode(',', $request->tags)))));
         $fields['slug'] = Str::slug($request->title);
 
-        Auth::user()->infos()->create($fields);
+        $request->user()->infos()->create($fields);
 
         return redirect()->route('informasi')->with('success', "Information '$request->title' berhasil dibuat");
     }

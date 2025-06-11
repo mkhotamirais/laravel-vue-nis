@@ -39,7 +39,7 @@ class AgendaController extends Controller
             'location' => 'required|string',
         ]);
 
-        Auth::user()->agendas()->create($fields);
+        $request->user()->agendas()->create($fields);
 
         return redirect()->route('agenda')->with('success', "Agenda '$request->title' berhasil dibuat");
     }
