@@ -91,7 +91,7 @@ import cl from "@/content_long.json";
       <!-- Sejarah -->
       <div class="mb-8 max-w-2xl">
         <div class="mb-4">
-          <h2 class="h2">Sejarah MTs Nurul Iman</h2>
+          <h2 class="h2">Sejarah MTs Nurul Imann</h2>
         </div>
 
         <article class="leading-relaxed space-y-2">
