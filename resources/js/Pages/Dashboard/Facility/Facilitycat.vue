@@ -98,7 +98,7 @@ const search = () => {
     <!-- List & Pagination -->
     <div v-if="facilitycats.data.length">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-        <template v-for="(ic, i) in facilitycats.data" :key="i">
+        <div v-for="(ic, i) in facilitycats.data" :key="i">
           <div
             v-if="user.role === ic.user.role || user.role === 'admin'"
             class="shadow-md p-3"
@@ -132,7 +132,7 @@ const search = () => {
               </div>
             </div>
           </div>
-        </template>
+        </div>
       </div>
       <PaginationInput :paginator="facilitycats" />
     </div>

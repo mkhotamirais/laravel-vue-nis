@@ -26,7 +26,6 @@ defineProps({
         content="Sekolah Nurul Iman menawarkan pendidikan terpadu dari Ponpes, RA, MTs, hingga MA dengan kurikulum modern dan nilai-nilai islami."
       />
     </Head>
-    <p>halo</p>
     <HeroSection :heroImages="heroImages" />
     <ProfileSection />
     <InformationSection :infos="infos" />

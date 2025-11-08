@@ -41,95 +41,102 @@ const deleteEkskul = (ec) => {
 </script>
 
 <template>
-  <Head>
-    <title>Program Ekstrakurikuler Unggulan</title>
-    <meta
-      head-key="description"
-      name="description"
-      content="Daftar Ekstrakurikuler di Nurul Iman Sindangkerta"
+  <div>
+    <Head>
+      <title>Program Ekstrakurikuler Unggulan</title>
+      <meta
+        head-key="description"
+        name="description"
+        content="Daftar Ekstrakurikuler di Nurul Iman Sindangkerta"
+      />
+    </Head>
+
+    <SectionHero
+      title="Ekstrakurikuler"
+      description="Daftar Ekstrakurikuler di Nurul Iman Sindangkerta"
     />
-  </Head>
 
-  <SectionHero
-    title="Ekstrakurikuler"
-    description="Daftar Ekstrakurikuler di Nurul Iman Sindangkerta"
-  />
+    <section class="py-8 relative overflow-hidden">
+      <MyBg position="left" />
+      <div class="container">
+        <!-- Editor -->
+        <div v-if="user" class="flex items-center justify-between mb-6">
+          <Link :href="route('ekstrakurikuler.create')" class="btn"
+            >Tambah</Link
+          >
+        </div>
 
-  <section class="py-8 relative overflow-hidden">
-    <MyBg position="left" />
-    <div class="container">
-      <!-- Editor -->
-      <div v-if="user" class="flex items-center justify-between mb-6">
-        <Link :href="route('ekstrakurikuler.create')" class="btn">Tambah</Link>
-      </div>
+        <SessionMsg :msg="success" />
 
-      <SessionMsg :msg="success" />
+        <div class="flex gap-2 mb-4">
+          <button
+            v-for="(c, i) in ['Semua', 'MA', 'MTs', 'Ponpes']"
+            :key="i"
+            class="btn"
+            :class="category == c ? '!bg-primary-dark' : ''"
+            @click="searchCategory(c)"
+          >
+            {{ c }}
+          </button>
+        </div>
+        <div v-if="extracurriculars.data.length">
+          <div class="">
+            <div v-for="(ec, i) in extracurriculars.data" :key="i" class="">
+              <div class="relative space-y-3 h-full mb-6">
+                <div class="mb-3">
+                  <h2 class="h2 mb-2">{{ ec.name }}</h2>
+                  <div class="badge">{{ categoryRole(ec.user.role) }}</div>
+                </div>
+                <a :href="`/storage/${ec.banner}`" class="block float-left">
+                  <img
+                    :src="
+                      ec.banner
+                        ? `/storage/${ec.banner}`
+                        : '/storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
+                    "
+                    :alt="ec.name"
+                    class="object-cover object-center rounded-lg bg-gray-100 sm:float-left w-full sm:w-80 h-48 mr-4 mb-4"
+                    loading="lazy"
+                  />
+                </a>
 
-      <div class="flex gap-2 mb-4">
-        <button
-          v-for="(c, i) in ['Semua', 'MA', 'MTs', 'Ponpes']"
-          :key="i"
-          class="btn"
-          :class="category == c ? '!bg-primary-dark' : ''"
-          @click="searchCategory(c)"
-        >
-          {{ c }}
-        </button>
-      </div>
-      <div v-if="extracurriculars.data.length">
-        <div class="">
-          <div v-for="(ec, i) in extracurriculars.data" :key="i" class="">
-            <div class="relative space-y-3 h-full mb-6">
-              <div class="mb-3">
-                <h2 class="h2 mb-2">{{ ec.name }}</h2>
-                <div class="badge">{{ categoryRole(ec.user.role) }}</div>
-              </div>
-              <a :href="`/storage/${ec.banner}`" class="block float-left">
-                <img
-                  :src="
-                    ec.banner
-                      ? `/storage/${ec.banner}`
-                      : '/storage/images/logos/logo-yayasan-nurul-iman-sindangkerta.png'
+                <h3 class="h3">Pembimbing</h3>
+                <p class="first-letter:uppercase">{{ ec.mentor }}</p>
+                <h3 class="h3">Jadwal</h3>
+                <p>{{ ec.schedule }}</p>
+                <div>
+                  <h3 class="h3">Deskripsi</h3>
+
+                  <article
+                    v-html="ec.description"
+                    class="text-content"
+                  ></article>
+                </div>
+                <div
+                  v-if="
+                    (user && user.role == ec.user?.role) ||
+                    (user && user.role == 'admin')
                   "
-                  :alt="ec.name"
-                  class="object-cover object-center rounded-lg bg-gray-100 sm:float-left w-full sm:w-80 h-48 mr-4 mb-4"
-                  loading="lazy"
-                />
-              </a>
-
-              <h3 class="h3">Pembimbing</h3>
-              <p class="first-letter:uppercase">{{ ec.mentor }}</p>
-              <h3 class="h3">Jadwal</h3>
-              <p>{{ ec.schedule }}</p>
-              <div>
-                <h3 class="h3">Deskripsi</h3>
-
-                <article v-html="ec.description" class="text-content"></article>
-              </div>
-              <div
-                v-if="
-                  (user && user.role == ec.user?.role) ||
-                  (user && user.role == 'admin')
-                "
-                class=""
-              >
-                <Link :href="route('ekstrakurikuler.edit', ec)" class="link"
-                  >ubah</Link
+                  class=""
                 >
-                |
-                <button class="link !text-red-500" @click="deleteEkskul(ec)">
-                  hapus
-                </button>
+                  <Link :href="route('ekstrakurikuler.edit', ec)" class="link"
+                    >ubah</Link
+                  >
+                  |
+                  <button class="link !text-red-500" @click="deleteEkskul(ec)">
+                    hapus
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          <PaginationInput :paginator="extracurriculars" />
+          <div>
+            <PaginationInput :paginator="extracurriculars" />
+          </div>
         </div>
+        <div v-else>Ekstrakurikuler tidak ditemukan</div>
       </div>
-      <div v-else>Ekstrakurikuler tidak ditemukan</div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>

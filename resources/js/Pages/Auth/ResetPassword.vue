@@ -20,40 +20,42 @@ const submit = () => {
 </script>
 
 <template>
-  <Head title=" - Reset Password" />
+  <div>
+    <Head title=" - Reset Password" />
 
-  <section class="w-1/2 mx-auto py-8">
-    <h1 class="font-bold text-2xl mb-4">Reset Password</h1>
+    <section class="w-1/2 mx-auto py-8">
+      <h1 class="font-bold text-2xl mb-4">Reset Password</h1>
 
-    <SessionMsg :msg="form.errors.error" type="error" />
+      <SessionMsg :msg="form.errors.error" type="error" />
 
-    <form @submit.prevent="submit" class="space-y-6">
-      <Input
-        label="Email"
-        icon="at"
-        placeholder="Email kamu"
-        v-model="form.email"
-        :error="form.password.email"
-      />
-      <Input
-        label="Password"
-        type="password"
-        placeholder="********"
-        icon="key"
-        v-model="form.password"
-        :error="form.errors.password"
-      />
-      <Input
-        label="Password Confirmation"
-        type="password"
-        placeholder="********"
-        icon="key"
-        v-model="form.password_confirmation"
-      />
+      <form @submit.prevent="submit" class="space-y-6">
+        <Input
+          label="Email"
+          icon="at"
+          placeholder="Email kamu"
+          v-model="form.email"
+          :error="form.password.email"
+        />
+        <Input
+          label="Password"
+          type="password"
+          placeholder="********"
+          icon="key"
+          v-model="form.password"
+          :error="form.errors.password"
+        />
+        <Input
+          label="Password Confirmation"
+          type="password"
+          placeholder="********"
+          icon="key"
+          v-model="form.password_confirmation"
+        />
 
-      <button type="submit" class="btn" :disabled="form.processing">
-        Reset Password
-      </button>
-    </form>
-  </section>
+        <button type="submit" class="btn" :disabled="form.processing">
+          Reset Password
+        </button>
+      </form>
+    </section>
+  </div>
 </template>

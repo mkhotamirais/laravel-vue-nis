@@ -59,14 +59,14 @@ const submit = () => {
         :error="form.errors.infocat_id"
       >
         <option :value="null">Pilih Kategori</option>
-        <template v-for="(fc, i) in facilitycats" :key="i">
+        <div v-for="(fc, i) in facilitycats" :key="i">
           <option
             v-if="user.role === 'admin' || user.role === fc.user.role"
             :value="fc.id"
           >
             {{ fc.name }}
           </option>
-        </template>
+        </div>
       </Select>
       <Input
         label="Caption"

@@ -71,14 +71,14 @@ const submit = () => {
         :error="form.errors.infocat_id"
       >
         <option value="">Pilih Kategori</option>
-        <template v-for="(ic, i) in infocats" :key="i">
+        <div v-for="(ic, i) in infocats" :key="i">
           <option
             v-if="user.role === 'admin' || user.role === ic.user.role"
             :value="ic.id"
           >
             {{ ic.name }}
           </option>
-        </template>
+        </div>
       </Select>
       <Input
         label="Tags (pisah dengan koma)"

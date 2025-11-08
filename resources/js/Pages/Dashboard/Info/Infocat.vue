@@ -98,42 +98,42 @@ const search = () => {
     <!-- List & Pagination -->
     <div v-if="infocats.data.length">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-        <template v-for="(ic, i) in infocats.data" :key="i">
-          <div
-            v-show="user.role === ic.user.role || user.role === 'admin'"
-            class="shadow-md p-3"
-          >
-            <form @submit.prevent="submitEdit(ic)" v-if="isEdit === i" class="">
-              <Input
-                placeholder="Edit name"
-                icon="sitemap"
-                v-model="editForm.name"
-                :error="editForm.errors.name"
-              />
-              <button type="submit" class="btn" :disabled="editForm.processing">
-                simpan
-              </button>
-            </form>
-            <div v-else>
-              <p>
-                {{ ic.name }}
-              </p>
-              <span class="text-sm text-gray-400">By {{ ic.user.name }}</span>
-            </div>
+        <div
+          v-for="(ic, i) in infocats.data"
+          :key="i"
+          v-show="user.role === ic.user.role || user.role === 'admin'"
+          class="shadow-md p-3"
+        >
+          <form @submit.prevent="submitEdit(ic)" v-if="isEdit === i" class="">
+            <Input
+              placeholder="Edit name"
+              icon="sitemap"
+              v-model="editForm.name"
+              :error="editForm.errors.name"
+            />
+            <button type="submit" class="btn" :disabled="editForm.processing">
+              simpan
+            </button>
+          </form>
+          <div v-else>
+            <p>
+              {{ ic.name }}
+            </p>
+            <span class="text-sm text-gray-400">By {{ ic.user.name }}</span>
+          </div>
 
-            <div class="flex gap-3 mt-2">
-              <div v-if="isEdit === i">
-                <button class="link" @click="cancelIsEdit">Batal</button>
-              </div>
-              <div v-else class="flex gap-3">
-                <button class="link" @click="setIsEdit(i, ic)">Edit</button>
-                <button class="link !text-red-500" @click="deleteInfocat(ic)">
-                  Hapus
-                </button>
-              </div>
+          <div class="flex gap-3 mt-2">
+            <div v-if="isEdit === i">
+              <button class="link" @click="cancelIsEdit">Batal</button>
+            </div>
+            <div v-else class="flex gap-3">
+              <button class="link" @click="setIsEdit(i, ic)">Edit</button>
+              <button class="link !text-red-500" @click="deleteInfocat(ic)">
+                Hapus
+              </button>
             </div>
           </div>
-        </template>
+        </div>
       </div>
       <PaginationInput :paginator="infocats" />
     </div>
