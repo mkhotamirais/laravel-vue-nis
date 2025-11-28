@@ -6,7 +6,7 @@
     "main_menu": [
         {
             "label": "Pendaftaran", 
-            "url": "/pendaftaran",
+            "url": "#",
             "sub_menu": [
                 {"label": "Pendaftaran RA", "url": "/pendaftaran-ra"},
                 {"label": "Pendaftaran MTs", "url": "/pendaftaran-mts"},
